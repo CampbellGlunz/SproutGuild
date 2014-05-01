@@ -1,0 +1,48 @@
+<<<<<<< HEAD
+npm-debug.log
+*.scssc
+.sass-cache/*
+.DS_Store
+*-ck.js
+providers_secret.js
+*.sublime-project
+
+*.sublime-workspace
+codekit-config.json
+
+config.rb
+
+deploy.sh
+
+.demeteorized
+
+dump/
+dump/*
+
+settings.json
+=======
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+config/initializers/secret_token.rb
+config/secrets.yml
+
+## Environment normalisation:
+/.bundle
+/vendor/bundle
+
+# these should all be checked in to normalise the environment:
+# Gemfile.lock, .ruby-version, .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+>>>>>>> 603629173113b59d417e4b0f3a3103e4ef762624
