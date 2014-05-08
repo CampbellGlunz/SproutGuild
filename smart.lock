@@ -54,8 +54,8 @@
       },
       "fast-render": {
         "git": "https://github.com/arunoda/meteor-fast-render.git",
-        "tag": "v0.1.25",
-        "commit": "010c4ee25b48ab6a7373000be48f9cd4a8535880"
+        "tag": "v0.2.5",
+        "commit": "93e2fb334e55fbe9b5ebb2a2e65964018658f43e"
       },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
