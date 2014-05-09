@@ -2,6 +2,7 @@ Accounts.ui.config({
   passwordSignupFields: 'USERNAME_AND_EMAIL'
 });
 
+//adds Markdown ability within site/comments
 EpicEditorOptions={
 	container:  'editor',
 	basePath:   '/editor',
@@ -13,6 +14,8 @@ EpicEditorOptions={
 	}
 };
 
+
+//jQuery social sharing
 SharrreOptions={
 	share: {
 	  //googlePlus: true,
@@ -24,12 +27,13 @@ SharrreOptions={
 	  // facebook: {layout: 'box_count'},
 	  twitter: {
 	    count: 'vertical',
-	    via: 'TelescopeApp'
+	    via: 'SproutGuild',
+	    lang: 'en'
 	  },
 	},
-	enableHover: false,
+	enableHover: true,
 	enableCounter: false,
-	enableTracking: true
+	enableTracking: false,
 };
 
 Statuses={
