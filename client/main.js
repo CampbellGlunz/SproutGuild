@@ -10,7 +10,7 @@ STATUS_APPROVED=2;
 STATUS_REJECTED=3;
 
 
-/**
+/** REMOVED NOTIFICATIONS
 // Notifications - only load if user is logged in
 // Not mandatory, because server won't publish anything even if we try to load.
 // Remember about Deps.autorun - user can log in and log out several times

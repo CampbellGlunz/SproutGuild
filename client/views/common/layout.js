@@ -30,7 +30,7 @@ Template.layout.rendered = function(){
     }
 
     // set title
-    var title = getSetting("title");
+    var title = "Sprout Guild";
     var tagline = getSetting("tagline");
     document.title = (tagline ? title+': '+tagline : title) || "";
 }
