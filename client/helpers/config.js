@@ -29,7 +29,7 @@ SharrreOptions={
 	    count: 'vertical',
 	    via: 'SproutGuild',
 	    lang: 'en'
-	  },
+	  }
 	},
 	enableHover: true,
 	enableCounter: false,
