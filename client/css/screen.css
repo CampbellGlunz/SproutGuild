@@ -109,7 +109,7 @@ html, body, .outer-wrapper {
 
 /* line 4, ../sass/partials/_main.scss */
 body {
-  background: #e0f1f7; }
+  background: #695e4a; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   /* line 9, ../sass/partials/_main.scss */
@@ -165,8 +165,8 @@ body {
 
 /* line 1, ../sass/partials/_typography.scss */
 body, textarea, input, button, input[type="submit"], input[type="button"] {
-  font-family: "Open Sans", "Proxima Nova Soft", "proxima-nova-soft", "PT SANS", "Helvetica Neue", Helvetica, sans-serif;
-  color: #4a4444;
+  font-family: "Proxima Nova Soft", "proxima-nova-soft", "PT SANS", "Helvetica Neue", Helvetica, sans-serif;
+  color: #978991;
   line-height: 1.6; }
 
 /* line 9, ../sass/partials/_typography.scss */
@@ -189,12 +189,12 @@ h2 {
 h3 {
   font-weight: bold;
   margin-bottom: 10px;
-  color: #b3c1c6; }
+  color: #dad3cc; }
 
 /* line 28, ../sass/partials/_typography.scss */
 .small {
   font-size: 80%;
-  color: #b3c1c6; }
+  color: #dad3cc; }
 
 @font-face {
   font-family: 'icomoon';
@@ -633,7 +633,7 @@ body.pageslide-open {
   .dropdown:hover .dropdown-menu {
     display: block; }
 
-/* line 5, ../sass/partials/_grid.scss */
+/* line 3, ../sass/partials/_grid.scss */
 .grid {
   width: 74%;
   margin-left: 13%;
@@ -643,24 +643,24 @@ body.pageslide-open {
   -webkit-transition: ease-out margin 300ms;
   -webkit-transition-delay: 0ms;
   transition: ease-out margin 300ms 0ms; }
-  /* line 10, ../sass/partials/_grid.scss */
+  /* line 8, ../sass/partials/_grid.scss */
   .chat-open .grid {
     margin-right: 24%;
     margin-left: 2%; }
-  /* line 14, ../sass/partials/_grid.scss */
+  /* line 12, ../sass/partials/_grid.scss */
   .notifications-open .grid {
     margin-left: 24%;
     margin-right: 2%; }
 
-/* line 19, ../sass/partials/_grid.scss */
+/* line 17, ../sass/partials/_grid.scss */
 .grid-small {
   width: 320px;
   margin: 0 auto; }
 
 /* line 10, ../sass/modules/_header.scss */
 .header {
-  background: #4e555d url("/img/bg-header.png") top center;
-  background-color: #4e555d;
+  background: #695e4a url("/img/sg-logo-trans.png") top center;
+  background-color: #695e4a;
   margin-bottom: 10px;
   height: 70px;
   position: relative;
@@ -739,7 +739,7 @@ body.pageslide-open {
     /* line 91, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons a {
       text-decoration: none;
-      color: #4a4444; }
+      color: #978991; }
     /* line 95, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons a.login-link-text {
       color: #fff;
@@ -940,7 +940,7 @@ body.pageslide-open {
         -moz-box-shadow: none;
         -webkit-box-shadow: none;
         box-shadow: none;
-        background: #4e555d url("/img/bg-header.png") top center; }
+        background: #695e4a url("/img/bg-header.png") top center; }
         /* line 80, ../sass/modules/_posts.scss */
         .post-content .post-upvote .upvote-link.not-voted:hover i {
           color: white;
@@ -964,7 +964,7 @@ body.pageslide-open {
     font-size: 24px; }
     /* line 103, ../sass/modules/_posts.scss */
     .post-content .post-sticky i {
-      color: #b3c1c6; }
+      color: #dad3cc; }
     /* line 106, ../sass/modules/_posts.scss */
     .post-content .post-sticky span {
       display: none; }
@@ -974,7 +974,7 @@ body.pageslide-open {
     /* line 112, ../sass/modules/_posts.scss */
     .post-content .post-heading .post-title {
       font-size: 20px;
-      color: #4a4444;
+      color: #978991;
       font-weight: normal;
       line-height: 1; }
       /* line 117, ../sass/modules/_posts.scss */
@@ -985,7 +985,7 @@ body.pageslide-open {
         color: #f36c3d; }
     /* line 124, ../sass/modules/_posts.scss */
     .post-content .post-heading .post-domain {
-      color: #b3c1c6;
+      color: #dad3cc;
       font-size: 14px;
       font-weight: normal; }
     /* line 129, ../sass/modules/_posts.scss */
@@ -1007,7 +1007,7 @@ body.pageslide-open {
   /* line 144, ../sass/modules/_posts.scss */
   .post-content .post-meta {
     font-size: 13px;
-    color: #b3c1c6;
+    color: #dad3cc;
     line-height: 1.5; }
 
 /* line 150, ../sass/modules/_posts.scss */
@@ -1031,7 +1031,7 @@ body.pageslide-open {
       line-height: 70px;
       vertical-align: baseline;
       text-align: center;
-      color: #b3c1c6;
+      color: #dad3cc;
       font-size: 36px;
       line-height: 50px; }
       /* line 172, ../sass/modules/_posts.scss */
@@ -1049,11 +1049,11 @@ body.pageslide-open {
         color: #7ac0e4; }
       /* line 185, ../sass/modules/_posts.scss */
       .post-actions li a:hover {
-        background: #4e555d url("/img/bg-header.png") top center;
+        background: #695e4a url("/img/bg-header.png") top center;
         color: white; }
       /* line 189, ../sass/modules/_posts.scss */
       .post-actions li a.voted {
-        background: #4e555d;
+        background: #695e4a;
         color: white;
         cursor: default; }
         /* line 193, ../sass/modules/_posts.scss */
@@ -1083,7 +1083,7 @@ body.pageslide-open {
         bottom: 5px;
         left: 0px;
         font-size: 13px;
-        color: #b3c1c6;
+        color: #dad3cc;
         pointer-events: none; }
 
 /* line 227, ../sass/modules/_posts.scss */
@@ -1155,7 +1155,7 @@ body.pageslide-open {
   background: #fffce0; }
 /* line 288, ../sass/modules/_posts.scss */
 .post.sticky .post-actions li a:hover {
-  background: #4e555d url("/img/bg-header.png") top center; }
+  background: #695e4a url("/img/bg-header.png") top center; }
 
 /* line 292, ../sass/modules/_posts.scss */
 .more-button {
@@ -1290,7 +1290,7 @@ body.pageslide-open {
 /* line 147, ../sass/modules/_comments.scss */
 .comment-meta {
   margin-bottom: 5px;
-  color: #b3c1c6; }
+  color: #dad3cc; }
   /* line 149, ../sass/modules/_comments.scss */
   .comment-meta .comment-username, .comment-meta .comment-time, .comment-meta .comment-permalink {
     display: inline-block;
@@ -1302,7 +1302,7 @@ body.pageslide-open {
     white-space: nowrap;
     overflow: hidden;
     width: 20px;
-    color: #b3c1c6;
+    color: #dad3cc;
     margin: 0; }
     /* line 160, ../sass/modules/_comments.scss */
     .comment-meta .comment-permalink:before {
@@ -1353,10 +1353,10 @@ body.pageslide-open {
       line-height: 30px;
       text-align: center;
       text-indent: 0;
-      color: #f36c3d; }
+      color: #a0ce67; }
     /* line 204, ../sass/modules/_comments.scss */
     .comment-actions a:hover {
-      background: #4e555d; }
+      background: #695e4a; }
       /* line 206, ../sass/modules/_comments.scss */
       .comment-actions a:hover i {
         color: white; }
@@ -1374,7 +1374,7 @@ body.pageslide-open {
     cursor: default; }
     /* line 222, ../sass/modules/_comments.scss */
     .comment-actions.downvoted .upvote i, .comment-actions.upvoted .downvote i {
-      color: #b3c1c6; }
+      color: #dad3cc; }
     /* line 225, ../sass/modules/_comments.scss */
     .comment-actions.downvoted .upvote:hover, .comment-actions.upvoted .downvote:hover {
       background: white; }
@@ -1404,7 +1404,7 @@ body.pageslide-open {
 
 /* line 2, ../sass/modules/_forms.scss */
 form.form-block, .accounts-dialog.form-block {
-  background: #e7eff2;
+  background: #978991;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1510,7 +1510,7 @@ form input[type="text"], form input[type="password"], form .login-form input, .a
   line-height: 20px; }
 /* line 78, ../sass/modules/_forms.scss */
 form input[disabled='disabled'], .accounts-dialog input[disabled='disabled'] {
-  color: #b3c1c6;
+  color: #dad3cc;
   background: #e7eff2; }
 /* line 82, ../sass/modules/_forms.scss */
 form textarea, .accounts-dialog textarea {
@@ -1522,7 +1522,7 @@ form input[type="submit"], form button, form .button, form .auth-buttons #login-
 /* line 89, ../sass/modules/_forms.scss */
 form .note, .accounts-dialog .note {
   padding: 5px 0;
-  color: #b3c1c6;
+  color: #dad3cc;
   font-size: 80%; }
 
 /* line 95, ../sass/modules/_forms.scss */
@@ -1697,7 +1697,7 @@ table {
 .error {
   margin-bottom: 10px;
   text-align: center;
-  background: #f36c3d;
+  background: #ead766;
   color: white; }
 
 /* line 1, ../sass/modules/_notifications.scss */
@@ -1736,11 +1736,11 @@ table {
       background: white; }
       /* line 28, ../sass/modules/_notifications.scss */
       .notifications ul li .notification-timestamp {
-        color: #b3c1c6;
+        color: #dad3cc;
         font-size: 12px; }
       /* line 32, ../sass/modules/_notifications.scss */
       .notifications ul li.read {
-        color: #b3c1c6;
+        color: #dad3cc;
         background: #f3f3f3; }
   /* line 38, ../sass/modules/_notifications.scss */
   .notifications .notifications-toggle {
@@ -1764,7 +1764,7 @@ table {
       -moz-box-shadow: none;
       -webkit-box-shadow: none;
       box-shadow: none;
-      color: #b3c1c6; }
+      color: #dad3cc; }
   /* line 55, ../sass/modules/_notifications.scss */
   .notifications-open .notifications {
     left: 0px;
