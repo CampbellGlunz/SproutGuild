@@ -36,8 +36,8 @@
 			color:$sg-light-grey;
 		}
 		&.image{
-			position:absolute;
-			left:50%;
+			//position:absolute;
+			//left:50%;
 			a{
 				display:block;
 				height:100%;
@@ -61,8 +61,8 @@
 		}
 	}
 }
-// @media only screen and (-webkit-min-device-pixel-ratio: 1.5){
-// 	.header{
+//@media only screen and (-webkit-min-device-pixel-ratio: 1.5){
+//	.header{
 // 		// background-image:url("/img/bg-header@2x.png");
 // 		// background-size: 10px 10px;
 // 		.logo a{

@@ -694,19 +694,15 @@ body.pageslide-open {
     /* line 35, ../sass/modules/_header.scss */
     .header .logo a, .header .logo a:visited {
       color: #dad3cc; }
-    /* line 38, ../sass/modules/_header.scss */
-    .header .logo.image {
-      position: absolute;
-      left: 50%; }
-      /* line 41, ../sass/modules/_header.scss */
-      .header .logo.image a {
-        display: block;
-        height: 100%;
-        width: 100%;
-        background: no-repeat center center;
-        font: 0/0 a;
-        text-shadow: none;
-        color: transparent; }
+    /* line 41, ../sass/modules/_header.scss */
+    .header .logo.image a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: no-repeat center center;
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent; }
   /* line 52, ../sass/modules/_header.scss */
   .header .user-nav {
     float: right;
