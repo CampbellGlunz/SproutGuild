@@ -64,8 +64,8 @@
 				text-align:center;
 				// line-height:$grid-unit;
 				vertical-align:middle;
-				color:$light-blue2;
-				color:$red;
+				color:$text;
+				color:$text;
 				text-shadow:0px 1px 0px white;
 				&.icon-check{
 					display:none;
@@ -78,7 +78,7 @@
 				@include box-shadow(none);
 				background:$highlight-color url("/img/bg-header.png") top center;
 				i{
-					color:white;
+					color:$hover;
 					text-shadow:none;
 				}
 			}
@@ -115,10 +115,10 @@
 			font-weight:normal;
 			line-height:1;
 			&:visited{
-				color:$grey;
+				color:$sg-grey;
 			}
 			&:hover{
-				color:$red;
+				color:$hover;
 			}	
 		}
 		.post-domain{
@@ -136,7 +136,7 @@
 			font-weight:normal;
 			vertical-align:middle;
 			&:hover{
-				background:$red;
+				background:$hover;
 				color:white;
 			}
 		}
@@ -174,21 +174,21 @@
 			}
 			&.share-link{
 				color:$blue;
-				color:$yellow;
+				color:$sg-yellow;
 			}
 			&.discuss-link{
-				color:$green;
+				color:$sg-yellow;
 			}
 			&.more-link{
 				color:$blue;
 			}
 			&:hover{
 				background:$highlight-color url("/img/bg-header.png") top center;
-				color:white;
+				color:$hover;
 			}
 			&.voted{
 				background:$highlight-color;
-				color:white;
+				color:$sg-green;
 				cursor: default;
 				.action{
 					color: #fff;
@@ -280,6 +280,7 @@
 			height:100%;
 		}
 	}
+	
 }
 .post.sticky{
 	.post-content, .post-actions li a{
