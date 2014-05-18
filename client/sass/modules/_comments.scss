@@ -14,7 +14,7 @@
 		padding:10px 0 0 10px;
 		max-width:120px;
 		white-space:nowrap;
-		@extend cf;
+		@extend .cf;
 		&:after {
 			right: 100%;
 			border: solid transparent;
@@ -199,7 +199,7 @@
 			text-align:center;
 			text-indent:0;
 			// color:$light-blue2;
-			color:$red;
+			color:$sg-green;
 		}
 		&:hover{
 			background:$highlight-color;

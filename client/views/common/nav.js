@@ -1,16 +1,11 @@
+logo_height = 31;
+logo_width = 153;
+
 Template.nav.helpers({
-  site_title: function(){
-    return getSetting('title');
-  },
-  logo_url: function(){
-    return getSetting('logoUrl');
-  },
-  logo_height: function(){
-    return getSetting('logoHeight');
-  },
-  logo_width: function(){
-    return getSetting('logoWidth');
-  },
+  site_title: 'Sprout Guild',
+  //logo_url: 'img/sg-logo-trans.png',
+  logo_height: logo_width,
+  logo_width: logo_height,
   logo_top: function(){
     return Math.floor((70-getSetting('logoHeight'))/2);
   },  
@@ -40,11 +35,12 @@ Template.nav.helpers({
 Template.nav.rendered=function(){
 
   if(!Meteor.user()){
-    $('.login-link-text').text("Sign Up/Sign In");
+    $('.login-link-text').text("Sign Up | Sign In");
   }else{
     $('#login-buttons-logout').before('<a href="/users/'+Meteor.user().slug+'" class="account-link button">View Profile</a>');
     $('#login-buttons-logout').before('<a href="/account" class="account-link button">Edit Account</a>');
   }
+
 };
 
 Template.nav.events({

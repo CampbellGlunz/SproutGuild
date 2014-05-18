@@ -19,3 +19,5 @@ dump/
 dump/*
 
 settings.json
+
+client/config.codekit

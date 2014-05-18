@@ -31,6 +31,6 @@ Template.layout.rendered = function(){
 
     // set title
     var title = "Sprout Guild";
-    var tagline = getSetting("tagline");
+    var tagline = "Grow Your Network Naturally";
     document.title = (tagline ? title+': '+tagline : title) || "";
 }
