@@ -1,17 +1,8 @@
-logo_height = 31;
-logo_width = 153;
-
 Template.nav.helpers({
   site_title: 'Sprout Guild',
-  //logo_url: 'img/sg-logo-trans.png',
-  logo_height: logo_width,
-  logo_width: logo_height,
-  logo_top: function(){
-    return Math.floor((70-getSetting('logoHeight'))/2);
-  },  
-  logo_offset: function(){
-    return -Math.floor(getSetting('logoWidth')/2);
-  },
+  logo_url: 'img/SproutGuild_rgb_150dpi.jpg',
+  logo_height: 55.5,
+  logo_width: 187.5,
   intercom: function(){
     return !!getSetting('intercomId');
   },
