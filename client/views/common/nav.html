@@ -4,19 +4,16 @@
     <a id="mobile-menu" href="#menu" class="mobile mobile-button menu"><i class="icon-menu"></i><span>{{i18n "Menu"}}</span></a>
 
     {{#if logo_url}}
-      <h1 class="logo image" style="height:{{logo_height}}px; width:{{logo_width}}px;">
+      <h1 class="logo image">
         <a href="/">
           <img src="{{logo_url}}" style="height:{{logo_height}}px;" alt="{{site_title}}"/>
         </a>
       </h1>
     {{else}}
       <h1 class="logo"><a href="/">{{site_title}}</a></h1>
-
     {{/if}}
     <ul class="nav site-nav desktop">
-      {{#if canView}}
-      <li class="dropdown">
-        <a class="View" href="/">{{i18n "View"}}</a>
+    <li class="dropdown">
         <div class="dropdown-menu">
           <ul role="menu" aria-labelledby="dLabel">
             <li><a class="top" href="/top">{{i18n "Top"}}</a></li>
@@ -26,8 +23,7 @@
           </ul>
         </div>
       </li>
-      {{/if}}
-      {{#if hasCategories}}
+      <!--{{#if hasCategories}}
       <li class="dropdown">
         <a class="categories" href="/">{{i18n "Categories"}}</a>
         <div class="dropdown-menu">
@@ -38,7 +34,7 @@
           </ul>
         </div>
       </li>
-      {{/if}}
+      {{/if}} -->
       {{#if isAdmin}}
       <li class="dropdown">
         <a class="admin" href="/">{{i18n "Administration"}}</a>
