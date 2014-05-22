@@ -76,7 +76,7 @@
 			}
 			&.not-voted:hover{
 				@include box-shadow(none);
-				background:$highlight-color url("/img/bg-header.png") top center;
+				//background:$highlight-color url("/img/bg-header.png") top center;
 				i{
 					color:$hover;
 					text-shadow:none;
@@ -88,7 +88,7 @@
 					display:none;
 				}
 				i.icon-check{
-					color:$blue;
+					color:$sg-green;
 					display:table-cell;
 				}
 			}
@@ -183,7 +183,7 @@
 				color:$blue;
 			}
 			&:hover{
-				background:$highlight-color url("/img/bg-header.png") top center;
+				//background:$highlight-color url("/img/bg-header.png") top center;
 				color:$hover;
 			}
 			&.voted{
@@ -284,10 +284,10 @@
 }
 .post.sticky{
 	.post-content, .post-actions li a{
-		background:$light-yellow;
+		background:$sg-yellow;
 	}
 	.post-actions li a:hover{
-		background:$highlight-color url("/img/bg-header.png") top center;
+		//background:$highlight-color url("/img/bg-header.png") top center;
 	}	
 }
 .more-button{
