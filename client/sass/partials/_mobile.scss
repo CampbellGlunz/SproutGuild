@@ -51,7 +51,7 @@
 		position:relative;
 		display:block;
 		margin-top:10px;
-		background:$red;
+		background:$sg-green;
 		color:white;
 		height:30px;
 		width:40px;
@@ -102,7 +102,7 @@
 				}
 			}
 			&.image{
-				margin-top:-10px; //since the mobile header is 20px thinner than the normal one, take off 10px more
+				margin-top:2px; 
 			}
 		}
 		.auth-buttons{

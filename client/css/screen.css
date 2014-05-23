@@ -698,7 +698,6 @@ body.pageslide-open {
       color: #a0ce67; }
     /* line 39, ../sass/modules/_header.scss */
     .header .logo.image {
-      top: 100px;
       left: 0px;
       display: inline-block;
       float: left;
@@ -1514,7 +1513,7 @@ form input[type="text"], form input[type="password"], form input[type="number"],
   /* line 71, ../sass/modules/_forms.scss */
   form input[type="text"]:focus, form input[type="password"]:focus, form input[type="number"]:focus, form textarea:focus, form .login-form input:focus, .accounts-dialog input[type="text"]:focus, .accounts-dialog input[type="password"]:focus, .accounts-dialog input[type="number"]:focus, .accounts-dialog textarea:focus, .accounts-dialog .login-form input:focus {
     outline: none;
-    border-color: #f36c3d;
+    border-color: #ead766;
     -moz-box-shadow: 0px 0px 5px 0px rgba(243, 108, 61, 0.3);
     -webkit-box-shadow: 0px 0px 5px 0px rgba(243, 108, 61, 0.3);
     box-shadow: 0px 0px 5px 0px rgba(243, 108, 61, 0.3); }
@@ -1545,7 +1544,7 @@ input[type="submit"], button, .button, .auth-buttons #login-buttons #login-butto
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
-  background: #f36c3d;
+  background: #a0ce67;
   color: white;
   text-align: center;
   display: block;
@@ -1575,7 +1574,7 @@ input[type="submit"], button, .button, .auth-buttons #login-buttons #login-butto
   border-bottom: 1px solid #dfdbdb; }
   /* line 128, ../sass/modules/_forms.scss */
   .twitter-signup .twitter-button {
-    background: #00aced; }
+    background: #a0ce67; }
 
 /* line 132, ../sass/modules/_forms.scss */
 .category-slug {
@@ -1846,7 +1845,7 @@ table {
     position: relative;
     display: block;
     margin-top: 10px;
-    background: #f36c3d;
+    background: #a0ce67;
     color: white;
     height: 30px;
     width: 40px; }
@@ -1904,7 +1903,7 @@ table {
         width: auto !important; }
       /* line 104, ../sass/partials/_mobile.scss */
       .header .logo.image {
-        margin-top: -10px; }
+        margin-top: 2px; }
     /* line 108, ../sass/partials/_mobile.scss */
     .header .auth-buttons {
       z-index: 100;

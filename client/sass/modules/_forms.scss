@@ -70,7 +70,7 @@ form, .accounts-dialog{
 		// @include box-shadow(inset 0px 0px 0px 1px black(0.2));
 		&:focus{
 			outline: none;
-			border-color:$red;
+			border-color:$sg-yellow;
 			@include box-shadow(0px 0px 5px 0px rgba($red,0.3));
 		}
 	}
@@ -98,7 +98,7 @@ form, .accounts-dialog{
 input[type="submit"], button, .button, .btn{
 	-webkit-appearance: none;
 	@include border-radius(0px);
-	background:$red;
+	background:$sg-green;
 	color:white;
 	text-align:center;
 	display:block;
@@ -126,7 +126,7 @@ input[type="submit"], button, .button, .btn{
 	padding-bottom:20px;
 	border-bottom:1px solid $lighter-grey;
 	.twitter-button{
-		background:#00aced;
+		background:$sg-green;
 	}
 }
 .category-slug{

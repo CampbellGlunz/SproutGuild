@@ -37,7 +37,7 @@
 		}
 		a, a:hover{ color:$sg-green;}
 		&.image{
-			top: 100px;
+			//top: 100px;
 			left: 0px;
 			display: inline-block;
 			float:left;
@@ -79,12 +79,12 @@
 }
 //@media only screen and (-webkit-min-device-pixel-ratio: 1.5){
 //	.header{
-// 		// background-image:url("/img/bg-header@2x.png");
-// 		// background-size: 10px 10px;
-// 		.logo a{
-// 			background-image: url('/img/logo@2x.png');
-// 			background-size: 124px 37px;
-// 		}
+ //		 background-image:url("/img/bg-header@2x.png");
+ 	//	 background-size: 10px 10px;
+ 	//	.logo a{
+ 	//		background-image: url('/img/logo@2x.png');
+ 	//		background-size: 124px 37px;
+ 	//	}
 // 	}
 // }
 .auth-buttons{
