@@ -7,6 +7,10 @@ EpicEditorOptions={
 	container:  'editor',
 	basePath:   '/editor',
 	clientSideStorage: false,
+	button: {
+		fullscreen: false,
+		bar: "auto"
+	},
 	theme: {
 		base:'/themes/base/epiceditor.css',
 		preview:'/themes/preview/github.css',

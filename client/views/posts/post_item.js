@@ -52,9 +52,6 @@ Template.post_item.helpers({
     var shortBody = this.body.substring(0,140);
     return shortBody;
   },
-  bigBody: function(){
-    
-  },
   smallBody: function(){
     if (this.body.length > 140){ return true;}
     else {return false;}
