@@ -1,3 +1,8 @@
+.body{
+	&.hidden{
+		display: hidden;
+	}
+}
 .empty-notice{
 	text-align:center;
 	padding:10px 0;
@@ -167,7 +172,7 @@
 			font-size:36px;
 			line-height:50px;
 			&.edit-link{
-				color:$red;
+				color:$sg-grey;
 			}
 			&.share-link{
 				color:$blue;

@@ -91,7 +91,13 @@
 	z-index:20;
 	float:right;
 	margin:20px 10px 0 0;
-	#login-text-and-button { background: $sg-green;}
+	#login-buttons-twitter { 
+		background: $sg-green;
+		border-color: $sg-green;
+		&:hover{
+			background: $sg-grey;
+			border-color: $sg-grey;
+			}}
 	#login-buttons{
 		position:relative;
 		line-height:26px;
@@ -122,6 +128,9 @@
 			line-height:1.5;
 			height:26px;
 			margin:10px 0 !important;
+			&:hover {
+				background:$sg-grey;
+			}
 		}
 		.login-header{
 			font-family:inherit;

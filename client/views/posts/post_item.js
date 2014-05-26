@@ -45,6 +45,17 @@ Template.post_item.helpers({
     var html_body=converter.makeHtml(this.body);
     return html_body.autoLink();
   },
+  bodyExpand: function(){
+    return this.body.substring(141,this.body.length);
+  },
+  bodyPreview: function(){
+    var shortBody = this.body.substring(0,140);
+    return shortBody;
+  },
+  smallBody: function(){
+    if (this.body.length > 140){ return true;}
+    else {return false;}
+  },
   ago: function(){
     // if post is approved show submission time, else show creation time. 
     time = this.status == STATUS_APPROVED ? this.submitted : this.createdAt;
@@ -138,7 +149,23 @@ Template.post_item.events({
       e.preventDefault();
       Meteor.call('cancelUpvotePost', post, function(error,result){
         trackEvent("post un-upvoted", {'_id': post._id});
-      });
+      },
+  'click .body-preview-expand': function(e){
+    e.preventDefault();
+    $('.body').removeClass("hidden");
+    $('.body-preview').addClass("hidden");
+    $(this).toggleClass('.body-preview-collapse');
+    $('.body-preview-collapse').removeClass("hidden");
+    $('.body-preview-expand').addClass("hidden");
+
+  },
+  'click .body-preview-collapse': function(e){
+    e.preventDefault();
+    $('.body-preview').removeClass("hidden");
+    $('.body').addClass("hidden");
+    $(this).toggleClass(".body-preview-expand");
+    $('.body-preview-expand').removeClass('hidden');
+    $('.body-preview-collapse').addClass('hidden');
   }
 
 
