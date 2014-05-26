@@ -133,11 +133,11 @@ Template.post_item.events({
     $share.toggleClass("hidden");
     $share.find('.share-replace').sharrre(SharrreOptions);
   },
-  'click .voted': function(e){
+  'click .upvote-link': function(e){
       var post = this;
       e.preventDefault();
       Meteor.call('cancelUpvotePost', post, function(error,result){
-        trackEvent("post unupvoted", {'_id': post._id});
+        trackEvent("post un-upvoted", {'_id': post._id});
       });
   }
 
