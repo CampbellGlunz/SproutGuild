@@ -149,7 +149,8 @@ Template.post_item.events({
       e.preventDefault();
       Meteor.call('cancelUpvotePost', post, function(error,result){
         trackEvent("post un-upvoted", {'_id': post._id});
-      },
+      });
+    },
   'click .body-preview-expand': function(e){
     e.preventDefault();
     $('.body').removeClass("hidden");
