@@ -38,13 +38,18 @@
               <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
             {{/each}}
         </h3>
-        <p class="post-meta">by  <a class="post-author" href="{{profileUrl}}">{{authorName}}</a><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} {{commentsDisplayText}}</a></span>
+        <p class="post-meta">
+        <!--by  <a class="post-author" href="{{profileUrl}}">{{authorName}}</a><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} {{commentsDisplayText}}</a></span>-->
+        <span class="body-preview short">{{bodyPreview}} </span>
+        <span class="body hidden">{{body}} </span>
+        {{#if smallBody}}<a class="body-preview-expand" href="#">[+]</a><a class="body-preview-collapse hidden" href="#">[-]</a>{{/if}}
           {{#if can_edit}}
             | <a href="/posts/{{_id}}/edit" class="edit-link goto-edit">Edit</a>
           {{/if}}
           {{#if currentUser.isAdmin}}
             | {{i18n "status"}}: {{status}}, {{i18n "votes"}}: {{votes}}, {{i18n "baseScore"}}: {{baseScore}}, {{i18n "score"}}: {{short_score}}, {{i18n "clicks"}}: {{clicks}}
           {{/if}}
+
         </p>
       </div>
     </div>
