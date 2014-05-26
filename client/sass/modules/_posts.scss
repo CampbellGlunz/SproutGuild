@@ -83,13 +83,10 @@
 				}
 			}
 			&.voted{
-				cursor:default;
-				i.icon-up{
-					display:none;
-				}
-				i.icon-check{
-					color:$sg-green;
-					display:table-cell;
+				@include box-shadow(none);
+				i{
+					color: $hover;	
+					text-shadow:none;			
 				}
 			}
 		}

@@ -132,5 +132,14 @@ Template.post_item.events({
     $this.toggleClass("active");
     $share.toggleClass("hidden");
     $share.find('.share-replace').sharrre(SharrreOptions);
+  },
+  'click .voted': function(e){
+      var post = this;
+      e.preventDefault();
+      Meteor.call('cancelUpvotePost', post, function(error,result){
+        trackEvent("post unupvoted", {'_id': post._id});
+      });
   }
+
+
 });
