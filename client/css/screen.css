@@ -730,26 +730,29 @@ body.pageslide-open {
   float: right;
   margin: 20px 10px 0 0; }
   /* line 94, ../sass/modules/_header.scss */
+  .auth-buttons #login-text-and-button {
+    background: #a0ce67; }
+  /* line 95, ../sass/modules/_header.scss */
   .auth-buttons #login-buttons {
     position: relative;
     line-height: 26px; }
-    /* line 100, ../sass/modules/_header.scss */
+    /* line 101, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons .account-link {
       display: block;
       color: white !important;
       margin-bottom: 10px;
       float: none; }
-    /* line 106, ../sass/modules/_header.scss */
+    /* line 107, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons a {
       text-decoration: none;
       color: #978991; }
-    /* line 110, ../sass/modules/_header.scss */
+    /* line 111, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons a.login-link-text {
       color: #978991;
       font-weight: normal;
       display: inline-block;
       height: 26px; }
-    /* line 116, ../sass/modules/_header.scss */
+    /* line 117, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons #login-buttons-password {
       float: none !important;
       text-shadow: none;
@@ -757,18 +760,18 @@ body.pageslide-open {
       line-height: 1.5;
       height: 26px;
       margin: 10px 0 !important; }
-    /* line 125, ../sass/modules/_header.scss */
+    /* line 126, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons .login-header {
       font-family: inherit;
       height: 26px;
       margin-right: 10px;
       cursor: pointer;
       color: #978991; }
-      /* line 131, ../sass/modules/_header.scss */
+      /* line 132, ../sass/modules/_header.scss */
       .auth-buttons #login-buttons .login-header:before {
         color: rgba(255, 255, 255, 0.5);
         content: "Welcome, "; }
-    /* line 136, ../sass/modules/_header.scss */
+    /* line 137, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons #login-buttons-logout {
       color: white;
       border: none;
@@ -778,7 +781,7 @@ body.pageslide-open {
       height: 26px;
       text-shadow: none; }
 
-/* line 148, ../sass/modules/_header.scss */
+/* line 149, ../sass/modules/_header.scss */
 .nav {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
@@ -791,7 +794,7 @@ body.pageslide-open {
   /* line 7, ../sass/partials/_mixins.scss */
   .nav:after {
     clear: both; }
-  /* line 151, ../sass/modules/_header.scss */
+  /* line 152, ../sass/modules/_header.scss */
   .nav > li {
     list-style-image: none;
     list-style-type: none;
@@ -810,24 +813,24 @@ body.pageslide-open {
     /* line 52, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/typography/lists/_horizontal-list.scss */
     .nav > li.last {
       padding-right: 0; }
-    /* line 155, ../sass/modules/_header.scss */
+    /* line 156, ../sass/modules/_header.scss */
     .nav > li > a {
       color: #978991;
       font-size: 16px;
       line-height: 26px;
       height: 26px;
       font-weight: normal; }
-      /* line 163, ../sass/modules/_header.scss */
+      /* line 164, ../sass/modules/_header.scss */
       .nav > li > a.intercom em:before {
         content: '('; }
-      /* line 166, ../sass/modules/_header.scss */
+      /* line 167, ../sass/modules/_header.scss */
       .nav > li > a.intercom em:after {
         content: ')'; }
 
-/* line 173, ../sass/modules/_header.scss */
+/* line 174, ../sass/modules/_header.scss */
 .search {
   position: relative; }
-  /* line 175, ../sass/modules/_header.scss */
+  /* line 176, ../sass/modules/_header.scss */
   .search .search-field {
     font-size: 14px;
     padding: 4px 12px;
@@ -838,16 +841,16 @@ body.pageslide-open {
     -webkit-transition: 0.2s all;
     -moz-transition: 0.2s all;
     background: white; }
-    /* line 185, ../sass/modules/_header.scss */
+    /* line 186, ../sass/modules/_header.scss */
     .search .search-field:focus {
       outline: none; }
-  /* line 190, ../sass/modules/_header.scss */
+  /* line 191, ../sass/modules/_header.scss */
   .search.empty .search-field {
     background: rgba(255, 255, 255, 0.1); }
-    /* line 192, ../sass/modules/_header.scss */
+    /* line 193, ../sass/modules/_header.scss */
     .search.empty .search-field:focus {
       background: white; }
-  /* line 196, ../sass/modules/_header.scss */
+  /* line 197, ../sass/modules/_header.scss */
   .search.empty .search-clear {
     display: none; }
 
