@@ -46,6 +46,11 @@
 		}
 	}
 }
+@media screen and (max-width: $break-medium){
+	.header{
+		padding-bottom: 40px;
+	}
+}
 @media screen and (max-width: $break-small) {
 	.header-button{
 		position:relative;
