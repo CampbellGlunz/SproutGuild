@@ -123,7 +123,7 @@ Template.post_item.rendered = function(){
 };
 
 Template.post_item.events({
-  'click .upvote-link': function(e, instance){
+  'click .not-voted': function(e, instance){
     var post = this;
     e.preventDefault();
     if(!Meteor.user()){
@@ -144,7 +144,7 @@ Template.post_item.events({
     $share.toggleClass("hidden");
     $share.find('.share-replace').sharrre(SharrreOptions);
   },
-  'click .upvote-link': function(e){
+  'click .voted': function(e){
       var post = this;
       e.preventDefault();
       Meteor.call('cancelUpvotePost', post, function(error,result){
