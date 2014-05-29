@@ -35,7 +35,7 @@ Accounts.onCreateUser(function(options, user){
     user.isAdmin = true;
 
   // give new users a few invites (default to 3)
-  user.inviteCount = getSetting('startInvitesCount', 3);
+  user.inviteCount = getSetting('startInvitesCount', 0);
 
   trackEvent('new user', {username: user.username, email: user.profile.email});
 
@@ -71,7 +71,7 @@ getEmailHash = function(user){
 addToMailChimpList = function(user){
   // add a user to a MailChimp list.
   // called when a new user is created, or when an existing user fills in their email
-  if((MAILCHIMP_API_KEY=getSetting('mailChimpAPIKey')) && (MAILCHIMP_LIST_ID=getSetting('mailChimpListId'))){
+  if((MAILCHIMP_API_KEY='4658c65e711ae0743a1974dc5f833b4e-us8') && (MAILCHIMP_LIST_ID='32e0afdc6a')){
 
     var email = getEmail(user);
     if (! email)
