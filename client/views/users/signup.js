@@ -1,3 +1,8 @@
+Template.signup.rendered=function(){
+    var email = $('.email-input').val();
+    $('[name=email').val(email);
+};
+
 Template.signup.events({
     'click input[type=submit]': function(event){
       event.preventDefault();

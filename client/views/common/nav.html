@@ -45,7 +45,7 @@
           <ul role="menu" aria-labelledby="dLabel">
             <li><a class="pending" href="/pending">{{i18n "Pending"}}</a></li>
             <li><a class="users" href="/all-users">{{i18n "Users"}}</a></li>
-            <li><a class="settings" href="/settings">{{i18n "Settings"}}</a></li>
+            <!--<li><a class="settings" href="/settings">{{i18n "Settings"}}</a></li>-->
             <li><a class="categories" href="/categories">{{i18n "Categories"}}</a></li>
             <li><a class="logs" href="/logs">{{i18n "Logs"}}</a></li>
             <li><a class="categories" href="/toolbox">{{i18n "Toolbox"}}</a></li>
@@ -65,7 +65,16 @@
 
     <div class="auth-buttons">
       {{> loginButtons align="right"}}
-    </div>
+    </div>  
 
   </header>
+  <!--SHOULD NOT GO HERE-->
+  {{#if isNotUser}}
+  <div class="grid MailChimpListSubscribe desktop">
+    <div class="sub-content">
+      <a class="message" href="#">Join the Guild:</a>
+      <input class="email-input" type="email" placeholder="email@example.com">
+    </div>
+  </div>
+  {{/if}}
 </template>

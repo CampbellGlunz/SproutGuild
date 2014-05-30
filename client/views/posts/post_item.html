@@ -33,10 +33,11 @@
         {{/if}}
         <h3 class="post-heading">
           <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>
-          {{#if url}}<span class="post-domain">{{domain}}</span>{{/if}}
+          <!--{{#if url}}<span class="post-domain">{{domain}}</span>{{/if}}-->
             {{#each categories}}
               <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
             {{/each}}
+            <span class="post-domain"><a class="post-author" href="{{profileUrl}}">{{authorName}}</a></span>
         </h3>
         <p class="post-meta">
         <!--by  <a class="post-author" href="{{profileUrl}}">{{authorName}}</a><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} {{commentsDisplayText}}</a></span>-->

@@ -9,6 +9,11 @@ Template.nav.helpers({
   canPost: function(){
     return canPost(Meteor.user());
   },
+  isNotUser: function(){
+    if(!Meteor.user()){
+      return true;
+    }
+  },
   requirePostsApproval: function(){
     return getSetting('requirePostsApproval');
   },
@@ -24,7 +29,6 @@ Template.nav.helpers({
 });
 
 Template.nav.rendered=function(){
-
   if(!Meteor.user()){
     $('.login-link-text').text("Sign Up | Sign In");
   }else{
@@ -46,5 +50,17 @@ Template.nav.events({
   'click .login-header': function(e){
     e.preventDefault();
     Router.go('/account');
+  },
+  'click .message': function(e){
+    e.preventDefault();
+    Router.go('/signup');
+    
+  },
+  'keyup .email-input': function(e){
+    e.preventDefault();
+    var code = e.which;
+    if(code==13){
+    Router.go('/signup');
+    }
   }
 });
