@@ -208,3 +208,57 @@
 		}
 	}
 }
+.MailChimpListSubscribe{
+	position:relative;
+	padding-bottom:10px;
+	.sub-content{
+		width:100%;
+		display:block;
+		height:$grid-unit;
+		background:black(0.075);
+		text-align:center;
+		color:white;
+		line-height:$grid-unit;
+		font-size:24px;
+		@include border-radius(3px);
+	}
+	.sub-content{
+		text-align: center;
+		font-size: 24px;
+		.message{
+			display:inline;
+			text-transform: bold;
+			color: #fff;
+			&:hover{
+				color: $sg-green;
+			}
+		}
+		.email-input{
+			display:inline;
+			position:relative;
+			font-size: 22px;
+			padding: 2px;
+			line-height: 1.3;
+			border-radius: 0px;
+			border: 0px;
+			width: auto;
+			-webkit-transition: 0.2s all;
+			-moz-transition: 0.2s all;
+			background-color: transparent;
+			&:focus{
+				outline-color: $sg-green;
+			}
+		}
+		.subscribe-btn{
+			display:inline;
+			position:relative;
+			padding: 2px;
+			line-height: 1.3;
+			
+			&:hover{
+				background-color: $sg-grey;
+				color: #fff;
+			}
+		}
+	}
+}
