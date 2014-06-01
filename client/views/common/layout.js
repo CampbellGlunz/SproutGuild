@@ -35,3 +35,16 @@ Template.layout.rendered = function(){
     document.title = "Sprout Guild"; 
     //(tagline ? title+': '+tagline : title) || "";
 }
+
+Template.layout.events({
+
+  'click .outer-wrapper':function(e){
+      var container = $("#login-dropdown-list");
+
+      if (!container.is(e.target) // if the target of the click isn't the container...
+          && container.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+        Accounts._loginButtonsSession.closeDropdown();
+      }
+  }
+});
