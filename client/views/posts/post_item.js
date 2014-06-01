@@ -152,21 +152,29 @@ Template.post_item.events({
       });
     },
   'click .body-preview-expand': function(e){
+    var $this = $(e.target).parents('.post-meta').find('.body-preview-expand');
+    var $collapse = $this.parents('.post-meta').find('.body-preview-collapse');
+    var $bodyFull = $this.parents('.post-meta').find('.body-full');
+    var $bodyPreview = $this.parents('.post-meta').find('.body-preview');
     e.preventDefault();
-    $('.body').removeClass("hidden");
-    $('.body-preview').addClass("hidden");
-    $(this).toggleClass('.body-preview-collapse');
-    $('.body-preview-collapse').removeClass("hidden");
-    $('.body-preview-expand').addClass("hidden");
+    $bodyFull.removeClass("hidden");
+    $bodyPreview.addClass("hidden");
+    //$(this).toggleClass('.body-preview-collapse');
+    $collapse.removeClass("hidden");
+    $this.addClass("hidden");
 
   },
   'click .body-preview-collapse': function(e){
+    var $this = $(e.target).parents('.post-meta').find('.body-preview-collapse');
+    var $expand = $this.parents('.post-meta').find('.body-preview-expand');
+    var $bodyFull = $this.parents('.post-meta').find('.body-full');
+    var $bodyPreview = $this.parents('.post-meta').find('.body-preview');
     e.preventDefault();
-    $('.body-preview').removeClass("hidden");
-    $('.body').addClass("hidden");
-    $(this).toggleClass(".body-preview-expand");
-    $('.body-preview-expand').removeClass('hidden');
-    $('.body-preview-collapse').addClass('hidden');
+    $bodyPreview.removeClass("hidden");
+    $bodyFull.addClass("hidden");
+    //$(this).toggleClass(".body-preview-expand");
+    $expand.removeClass('hidden');
+    $this.addClass('hidden');
   }
 
 
