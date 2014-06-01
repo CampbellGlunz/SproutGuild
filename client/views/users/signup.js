@@ -1,6 +1,6 @@
 Template.signup.rendered=function(){
     var email = $('.email-input').val();
-    $('[name=email').val(email);
+    $('[name=email]').val(email);
 };
 
 Template.signup.events({

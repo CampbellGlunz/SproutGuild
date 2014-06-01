@@ -1,4 +1,4 @@
-Template.nav.helpers({
+  Template.nav.helpers({
   site_title: 'Sprout Guild',
   logo_url: 'img/SproutGuild_rgb_150dpi.jpg',
   logo_height: 55.5,
