@@ -41,9 +41,12 @@
         </h3>
         <p class="post-meta">
         <!--by  <a class="post-author" href="{{profileUrl}}">{{authorName}}</a><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} {{commentsDisplayText}}</a></span>-->
-        <span class="body-preview short">{{bodyPreview}} </span>
-        <span class="body hidden">{{body}} </span>
-        {{#if smallBody}}<a class="body-preview-expand" href="#">[+]</a><a class="body-preview-collapse hidden" href="#">[-]</a>{{/if}}
+          <span class="body-preview short">{{bodyPreview}} </span>
+          <span class="body-full hidden">{{body}} </span>
+          {{#if smallBody}}
+          <a class="body-preview-expand" href="#">[+]</a>
+          <a class="body-preview-collapse hidden" href="#">[-]</a>
+          {{/if}}
           {{#if can_edit}}
             | <a href="/posts/{{_id}}/edit" class="edit-link goto-edit">Edit</a>
           {{/if}}
