@@ -70,6 +70,7 @@ Template.post_edit.events({
   'click input[type=submit]': function(e, instance){
     var post = this;
     var categories = [];
+    var location = $('#location').val();
     var url = $('#url').val();
     var shortUrl = $('#short-url').val();
     var status = parseInt($('input[name=status]:checked').val());
@@ -87,10 +88,11 @@ Template.post_edit.events({
     });
 
     var properties = {
+      location:         location,
       headline:         $('#title').val(),
       shortUrl:         shortUrl,
       body:             instance.editor.exportFile(),
-      categories:       categories,
+      categories:       categories
     };
 
     if(url){
