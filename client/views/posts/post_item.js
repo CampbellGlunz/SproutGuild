@@ -86,6 +86,9 @@ Template.post_item.helpers({
   },
   pointsUnitDisplayText: function(){
     return this.votes == 1 ? i18n.t('point') : i18n.t('points');
+  },
+  locationIsNotEmpty: function(){
+    return this.location;
   }
 });
 
