@@ -62,19 +62,8 @@
       <li><a id="submit" class="submit button" href="/submit">{{i18n "Post"}}</a></li>
     </ul>
     {{/if}}
-
     <div class="auth-buttons">
       {{> loginButtons align="right"}}
     </div>  
-
   </header>
-  <!--SHOULD NOT GO HERE-->
-  {{#if isNotUser}}
-  <div class="grid MailChimpListSubscribe desktop">
-    <div class="sub-content">
-      <a class="message" href="#">Join the Guild:</a>
-      <input class="email-input" type="email" placeholder="email@example.com">
-    </div>
-  </div>
-  {{/if}}
 </template>

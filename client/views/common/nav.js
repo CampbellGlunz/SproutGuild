@@ -1,4 +1,4 @@
-Template.nav.helpers({
+  Template.nav.helpers({
   site_title: 'Sprout Guild',
   logo_url: 'img/SproutGuild_rgb_150dpi.jpg',
   logo_height: 55.5,
@@ -50,17 +50,5 @@ Template.nav.events({
   'click .login-header': function(e){
     e.preventDefault();
     Router.go('/account');
-  },
-  'click .message': function(e){
-    e.preventDefault();
-    Router.go('/signup');
-    
-  },
-  'keyup .email-input': function(e){
-    e.preventDefault();
-    var code = e.which;
-    if(code==13){
-    Router.go('/signup');
-    }
   }
 });
