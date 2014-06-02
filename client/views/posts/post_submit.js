@@ -41,6 +41,7 @@ Template.post_submit.events({
     }
 
     var title= $('#title').val();
+    var location = $('#location').val();
     var url = $('#url').val();
     var shortUrl = $('#short-url').val();
     var body = instance.editor.exportFile();
@@ -57,6 +58,7 @@ Template.post_submit.events({
     var properties = {
         headline: title
       , body: body
+      , location: location
       , shortUrl: shortUrl
       , categories: categories
       , sticky: sticky
@@ -87,6 +89,8 @@ Template.post_submit.events({
   'click .get-title-link': function(e){
     e.preventDefault();
     var url=$("#url").val();
+    var cleanUrl = (url.substring(0, 7) == "http://" || url.substring(0, 8) == "https://") ? url : "http://"+url;
+    url = cleanUrl;
     $(".get-title-link").addClass("loading");
     if(url){
       $.get(url, function(response){
