@@ -26,7 +26,7 @@ Template.post_submit.rendered = function(){
   });
 
   // $("#postUser").selectToAutocomplete(); // XXX
-
+          
 }
 
 Template.post_submit.events({
@@ -44,7 +44,7 @@ Template.post_submit.events({
     var location = $('#location').val();
     var url = $('#url').val();
     var shortUrl = $('#short-url').val();
-    var body = instance.editor.exportFile();
+    var body = $('#body').val();
     var categories=[];
     var sticky=!!$('#sticky').attr('checked');
     var submitted = $('#submitted_hidden').val();
@@ -85,6 +85,37 @@ Template.post_submit.events({
         Router.go('/posts/'+post.postId);
       }
     });
+  },
+  'click .tweet-submit-button': function(e){
+    e.preventDefault();
+    var url = $('#url').val();
+    var cleanUrl = (url.substring(0, 7) == "http://" || url.substring(0, 8) == "https://") ? url : "http://"+url;
+    url = cleanUrl;
+    var urlPiece = encodeURIComponent(cleanUrl);
+    var title= $('#title').val();
+    var titlePiece = encodeURI(title);
+
+    var urlTwit = 'https://twitter.com/intent/tweet?text=' + titlePiece + '&via=SproutGuild&url=' + urlPiece;
+
+    function tweetPop(){
+        var intentRegex = /twitter\.com(\:\d{2,4})?\/intent\/(\w+)/,
+            windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
+            width = 550,
+            height = 420,
+            winHeight = screen.height,
+            winWidth = screen.width;
+            left = Math.round((winWidth / 2) - (width / 2));
+            top = 0;
+        if (winHeight > height) {
+            top = Math.round((winHeight / 2) - (height / 2));
+            }
+        window.open(urlTwit, 'intent', windowOptions + ',width=' + width +',height=' + height + ',left=' + left + ',top=' + top);
+        e.returnValue = false;
+        e.preventDefault && e.preventDefault();
+    };
+    tweetPop();
+
+    $('#sg-submit').click();
   },
   'click .get-title-link': function(e){
     e.preventDefault();
