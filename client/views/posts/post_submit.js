@@ -113,7 +113,8 @@ Template.post_submit.events({
         e.returnValue = false;
         e.preventDefault && e.preventDefault();
     };
-    tweetPop();
+    if (title && url)
+      tweetPop();
 
     $('#sg-submit').click();
   },
