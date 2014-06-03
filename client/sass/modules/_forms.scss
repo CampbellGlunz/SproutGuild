@@ -58,6 +58,7 @@ form, .accounts-dialog{
 			padding-left: 6px;
 			display: inline;
     		position: relative;
+    		float:right;
     		&:hover:after{
 			    background: #333;
 			    background: rgba(0,0,0,.8);
@@ -83,13 +84,14 @@ form, .accounts-dialog{
 			}
 		}
 		#or {
+			float:right;
 			padding-left: 6px;
 			&:hover{
 				color: $sg-grey;
 			}
 		}
 		a{
-			float:right;
+			float:left;
 			display:block;
 			&:hover{
 				
