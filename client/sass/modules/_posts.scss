@@ -33,27 +33,28 @@
 	min-height:$grid-unit - 30px;
 	// margin-right:240px;
 	margin-right:160px;
+	.post-avatar{
+		padding-right: 4px;
+		@include border-radius(100px);
+		overflow:hidden;
+		position:block;
+		float:left;
+		img{
+			height:40px;
+			width:40px;
+			display:block;
+		}
+	}
 	.post-info{
 		padding:$grid-padding - 2px $grid-padding;
 		margin-left:30px;
 	}
-	.post-rank{
-		position:absolute;
-		top:0px;
-		left:-50px;
-		display:block;
-		height:$grid-unit;
-		line-height:$grid-unit;
-		width:30px;
-		text-align:right;
-		font-size:30px;
-		// font-weight:bold;
-		color:black(0.1);
-	}
+	
 	.post-upvote{
 		position:absolute;
 		top:0px;
 		bottom:0px;
+
 		.upvote-link{
 			height:100%;
 			display:table;
@@ -66,13 +67,12 @@
 			border-right:1px solid $lightest-grey;
 			i{
 				font-size:12px;
-				display:table-cell;
-				height:100%;
+				display:inline-block;
 				width:100%;
+				vertical-align:bottom;
 				text-align:center;
 				// line-height:$grid-unit;
-				vertical-align:middle;
-				color:$text;
+				padding-top:12px;
 				color:$text;
 				text-shadow:0px 1px 0px white;
 				&.icon-check{
@@ -80,7 +80,14 @@
 				}
 			}
 			span{
-				display:none;
+				font-size:12px;
+				display: block;
+				//height:100%;
+				width:100%;
+				text-align:center;
+				// line-height:$grid-unit;
+				vertical-align:text-top;
+				color:$text;
 			}
 			&.not-voted:hover{
 				@include box-shadow(none);
@@ -143,6 +150,13 @@
 			&:hover{
 				background:$hover;
 				color:white;
+			}
+		}
+		a{
+			font-size: 11px;
+			color: $sg-grey;
+			&:hover{
+				color: $sg-green;
 			}
 		}
 	}

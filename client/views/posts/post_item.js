@@ -82,7 +82,7 @@ Template.post_item.helpers({
     return getCategoryUrl(this.slug);
   },
   commentsDisplayText: function(){
-    return this.comments == 1 ? i18n.t('comment') : i18n.t('comments');
+    return this.comments == 1 ? i18n.t('COMMENT:') : i18n.t('COMMENTS:');
   },
   pointsUnitDisplayText: function(){
     return this.votes == 1 ? i18n.t('point') : i18n.t('points');
@@ -136,6 +136,37 @@ Template.post_item.events({
     Meteor.call('upvotePost', post, function(error, result){
       trackEvent("post upvoted", {'_id': post._id});
     });
+  },
+  'click .tweet-post-button': function(e){
+    var $this = $(e.target).parents('.post-heading').find('.share-replace');
+    e.preventDefault();
+    var url = $this.attr("data-url");
+    var cleanUrl = (url.substring(0, 7) == "http://" || url.substring(0, 8) == "https://") ? url : "http://"+url;
+    url = cleanUrl;
+    var urlPiece = encodeURIComponent(cleanUrl);
+    var title= $this.attr("data-text");
+    var titlePiece = encodeURI(title);
+
+    var urlTwit = 'https://twitter.com/intent/tweet?text=' + titlePiece + '&via=SproutGuild&url=' + urlPiece;
+
+    function tweetPop(){
+        var intentRegex = /twitter\.com(\:\d{2,4})?\/intent\/(\w+)/,
+            windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
+            width = 550,
+            height = 420,
+            winHeight = screen.height,
+            winWidth = screen.width;
+            left = Math.round((winWidth / 2) - (width / 2));
+            top = 0;
+        if (winHeight > height) {
+            top = Math.round((winHeight / 2) - (height / 2));
+            }
+        window.open(urlTwit, 'intent', windowOptions + ',width=' + width +',height=' + height + ',left=' + left + ',top=' + top);
+        e.returnValue = false;
+        e.preventDefault && e.preventDefault();
+    };
+    if (title && url)
+      tweetPop();
   },
   'click .share-link': function(e){
     var $this = $(e.target).parents('.post-share').find('.share-link');
