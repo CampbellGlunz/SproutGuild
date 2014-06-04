@@ -152,6 +152,13 @@
 				color:white;
 			}
 		}
+		a{
+			font-size: 11px;
+			color: $sg-grey;
+			&:hover{
+				color: $sg-green;
+			}
+		}
 	}
 	.post-meta{
 		font-size:13px;

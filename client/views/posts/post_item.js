@@ -82,7 +82,7 @@ Template.post_item.helpers({
     return getCategoryUrl(this.slug);
   },
   commentsDisplayText: function(){
-    return this.comments == 1 ? i18n.t('comment') : i18n.t('comments');
+    return this.comments == 1 ? i18n.t('COMMENT:') : i18n.t('COMMENTS:');
   },
   pointsUnitDisplayText: function(){
     return this.votes == 1 ? i18n.t('point') : i18n.t('points');
