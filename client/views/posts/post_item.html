@@ -1,5 +1,6 @@
 <template name="post_item">
   {{# with post}}
+
   <div class="post post-{{rank}} {{#if sticky}}sticky{{/if}} {{inactiveClass}}" id="{{_id}}">
     <ul class="post-actions">
       <li class="post-share desktop"><a href="#" class="share-link"><i class="icon-share"></i><span class="action">{{i18n 'Share'}}</span></a>
@@ -28,36 +29,40 @@
         {{/if}}
       </div>
       <div class="post-info">
-        {{#if sticky}}
-          <span class="post-sticky"><i class="icon-pin"></i><span>{{i18n "Sticky"}}</span></span>
-        {{/if}}
-        <h3 class="post-heading">
-          <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>
-          <!--{{#if url}}<span class="post-domain">{{domain}}</span>{{/if}}-->
-            {{#each categories}}
-              <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
-            {{/each}}
-            {{#if locationIsNotEmpty}}
-            <span class="post-domain">[{{location}}]</span>
+        <div class="post-avatar">
+          <img class="user-avatar" src="{{userAvatar}}"/>
+        </div>
+        <div class="post-body">
+          {{#if sticky}}
+            <span class="post-sticky"><i class="icon-pin"></i><span>{{i18n "Sticky"}}</span></span>
+          {{/if}}
+          <h3 class="post-heading">
+            <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>
+            <!--{{#if url}}<span class="post-domain">{{domain}}</span>{{/if}}-->
+              {{#each categories}}
+                <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
+              {{/each}}
+              {{#if locationIsNotEmpty}}
+              <span class="post-domain">[{{location}}]</span>
+              {{/if}}
+          </h3>
+          <p class="post-meta">
+          <!--by  <a class="post-author" href="{{profileUrl}}">{{authorName}}</a><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} {{commentsDisplayText}}</a></span>-->
+            <span class="body-preview short">{{bodyPreview}} </span>
+            <span class="body-full hidden">{{body}} </span>
+            {{#if smallBody}}
+            <a class="body-preview-expand" href="#">[+]</a>
+            <a class="body-preview-collapse hidden" href="#">[-]</a>
             {{/if}}
-        </h3>
-        <p class="post-meta">
-        <!--by  <a class="post-author" href="{{profileUrl}}">{{authorName}}</a><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} {{commentsDisplayText}}</a></span>-->
-          <span class="body-preview short">{{bodyPreview}} </span>
-          <span class="body-full hidden">{{body}} </span>
-          {{#if smallBody}}
-          <a class="body-preview-expand" href="#">[+]</a>
-          <a class="body-preview-collapse hidden" href="#">[-]</a>
-          {{/if}}
-          {{#if can_edit}}
-            | <a href="/posts/{{_id}}/edit" class="edit-link goto-edit">Edit</a>
-          {{/if}}
-          {{#if currentUser.isAdmin}}
-            | {{i18n "status"}}: {{status}}, {{i18n "votes"}}: {{votes}}, {{i18n "baseScore"}}: {{baseScore}}, {{i18n "score"}}: {{short_score}}, {{i18n "clicks"}}: {{clicks}}
-          {{/if}}
-
-        </p>
-      </div>
+            {{#if can_edit}}
+              | <a href="/posts/{{_id}}/edit" class="edit-link goto-edit">Edit</a>
+            {{/if}}
+            {{#if currentUser.isAdmin}}
+              | {{i18n "status"}}: {{status}}, {{i18n "votes"}}: {{votes}}, {{i18n "baseScore"}}: {{baseScore}}, {{i18n "score"}}: {{short_score}}, {{i18n "clicks"}}: {{clicks}}
+            {{/if}}
+          </p>
+          </div>
+        </div>
     </div>
     {{#if body}}
       <div class="post-message markdown">{{{body_formatted}}}</div>

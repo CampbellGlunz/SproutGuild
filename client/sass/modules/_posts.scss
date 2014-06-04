@@ -33,6 +33,18 @@
 	min-height:$grid-unit - 30px;
 	// margin-right:240px;
 	margin-right:160px;
+	.post-avatar{
+		padding-right: 4px;
+		@include border-radius(100px);
+		overflow:hidden;
+		position:block;
+		float:left;
+		img{
+			height:40px;
+			width:40px;
+			display:block;
+		}
+	}
 	.post-info{
 		padding:$grid-padding - 2px $grid-padding;
 		margin-left:30px;
