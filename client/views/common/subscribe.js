@@ -17,5 +17,10 @@ Template.subscribe.events({
     if(code==13){
     Router.go('/signup');
     }
+  },
+  'click .email-submit': function(e){
+    e.preventDefault();
+    Router.go('/signup');
+    
   }
 });
