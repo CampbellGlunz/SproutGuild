@@ -45,10 +45,15 @@
               <span class="post-domain">[{{location}}]</span>
               {{/if}}
               <span class="comments"> <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} COMMENTS</a></span> | 
-              <a class="tweet-post-button" title="Tweet" href=''> TWEET <!--<img src="img/bird_blue_16.png">--></a><div data-url="{{postLink}}" data-text="{{headline}}" class="share-replace"></div>
+              <a class="tweet-post-button" href=''> TWEET <!--<img src="img/bird_blue_16.png">--></a><div data-url="{{postLink}}" data-text="{{headline}}" class="share-replace"></div>
           </h3>
           <p class="post-meta">
           <!--by  <a class="post-author" href="{{profileUrl}}">{{authorName}}</a><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} {{commentsDisplayText}}</a></span>-->
+            <div class="comment-list hidden"><ul class="comments comment-list">
+              {{#each child_comment}}
+                {{> comment_item}}
+              {{/each}} 
+            </ul></div>
             <span class="body-preview short">{{bodyPreview}} </span>
             <span class="body-full hidden">{{body}} </span>
             {{#if smallBody}}
