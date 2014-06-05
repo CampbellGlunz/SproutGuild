@@ -7,6 +7,11 @@ Template.post_item.helpers({
     // note: when the data context is set by the router, it will be "this.post". When set by a parent template it'll be "this"
     return this.post || this;
   },
+   child_comment: function(){
+    var post = this;
+    var comments = Comments.find({post: "6Ws9Nky8oYhqZkeWn"}, {sort: {score: -1, submitted: -1}});
+    return comments;
+  },
   postLink: function(){
     return !!this.url ? getOutgoingUrl(this.url) : "/posts/"+this._id;
   },
@@ -190,8 +195,10 @@ Template.post_item.events({
     var $collapse = $this.parents('.post-meta').find('.body-preview-collapse');
     var $bodyFull = $this.parents('.post-meta').find('.body-full');
     var $bodyPreview = $this.parents('.post-meta').find('.body-preview');
+    var $comment = $(e.target).parents('.post-meta').find('.comment-list');
     e.preventDefault();
     $bodyFull.removeClass("hidden");
+    $comment.removeClass("hidden");
     $bodyPreview.addClass("hidden");
     //$(this).toggleClass('.body-preview-collapse');
     $collapse.removeClass("hidden");
@@ -203,13 +210,13 @@ Template.post_item.events({
     var $expand = $this.parents('.post-meta').find('.body-preview-expand');
     var $bodyFull = $this.parents('.post-meta').find('.body-full');
     var $bodyPreview = $this.parents('.post-meta').find('.body-preview');
+    var $comment = $(e.target).parents('.post-meta').find('.comment-list');
     e.preventDefault();
     $bodyPreview.removeClass("hidden");
     $bodyFull.addClass("hidden");
+    $comment.addClass('hidden');
     //$(this).toggleClass(".body-preview-expand");
     $expand.removeClass('hidden');
     $this.addClass('hidden');
   }
-
-
 });

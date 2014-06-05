@@ -152,11 +152,24 @@
 				color:white;
 			}
 		}
+		.go-to-comments{
+				color: $sg-green;
+				&:hover{
+					color: $sg-grey;
+				}
+			}
 		a{
 			font-size: 11px;
 			color: $sg-grey;
 			&:hover{
 				color: $sg-green;
+			}
+
+		}
+		.tweet-post-button{
+			color: #4099FF;
+			&:hover{
+				color: #4099ff;
 			}
 		}
 	}

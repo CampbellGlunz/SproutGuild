@@ -9,7 +9,7 @@ EpicEditorOptions={
 	clientSideStorage: false,
 	button: {
 		fullscreen: false,
-		bar: "auto"
+		preview: false
 	},
 	theme: {
 		base:'/themes/base/epiceditor.css',

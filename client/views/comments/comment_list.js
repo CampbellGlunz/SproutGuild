@@ -1,6 +1,6 @@
 Template.comment_list.created = function(){
   postObject = this.data;
-}
+} 
 
 Template.comment_list.helpers({
   has_comments: function(){
