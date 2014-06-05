@@ -1919,6 +1919,17 @@ table {
     -webkit-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15);
     box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15); }
 
+/* line 1, ../sass/modules/_about.scss */
+.about-info {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; }
+  /* line 5, ../sass/modules/_about.scss */
+  .about-info h1 {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #a0ce67; }
+
 /* line 1, ../sass/partials/_mobile.scss */
 .mobile {
   display: none !important; }
