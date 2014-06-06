@@ -70,6 +70,29 @@ Template.post_submit.events({
       var cleanUrl = (url.substring(0, 7) == "http://" || url.substring(0, 8) == "https://") ? url : "http://"+url;
       properties.url = cleanUrl;
     }
+    
+    var urlPiece = encodeURIComponent(cleanUrl);
+    var titlePiece = encodeURI(title);
+    var urlTwit = 'https://twitter.com/intent/tweet?text=' + titlePiece + '&via=SproutGuild&url=' + urlPiece;
+
+    function tweetPop(twitterURl){
+        var intentRegex = /twitter\.com(\:\d{2,4})?\/intent\/(\w+)/,
+            windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
+            width = 550,
+            height = 420,
+            winHeight = screen.height,
+            winWidth = screen.width;
+            left = Math.round((winWidth / 2) - (width / 2));
+            top = 0;
+        if (winHeight > height) {
+            top = Math.round((winHeight / 2) - (height / 2));
+            }
+        window.open(urlTwit, 'intent', windowOptions + ',width=' + width +',height=' + height + ',left=' + left + ',top=' + top);
+        e.returnValue = false;
+        e.preventDefault && e.preventDefault();
+    };
+    if (title && url)
+      tweetPop(urlTwit);
 
     Meteor.call('post', properties, function(error, post) {
       if(error){
