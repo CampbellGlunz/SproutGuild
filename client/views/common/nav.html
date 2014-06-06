@@ -62,11 +62,15 @@
     </ul>
     {{#if canView}}
     <ul class="nav user-nav desktop">
-      <li><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
+      <li class="center">
+        <div class="auth-buttons">
+            {{> loginButtons align="right"}}
+            <!-- <img class="user-avatar hidden" src="{{userAvatar}}"/> -->
+        </div> 
+      </li>
+      <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
     </ul>
     {{/if}}
-    <div class="auth-buttons">
-      {{> loginButtons align="right"}}
-    </div>  
+
   </header>
 </template>

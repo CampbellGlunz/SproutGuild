@@ -7,11 +7,11 @@ Template.post_item.helpers({
     // note: when the data context is set by the router, it will be "this.post". When set by a parent template it'll be "this"
     return this.post || this;
   },
-   child_comment: function(){
-    var post = this;
-    var comments = Comments.find({post: "6Ws9Nky8oYhqZkeWn"}, {sort: {score: -1, submitted: -1}});
-    return comments;
-  },
+  //  child_comment: function(){
+  //   var post = this;
+  //   var comments = Comments.find({post: "6Ws9Nky8oYhqZkeWn"}, {sort: {score: -1, submitted: -1}});
+  //   return comments;
+  // },
   postLink: function(){
     return !!this.url ? getOutgoingUrl(this.url) : "/posts/"+this._id;
   },

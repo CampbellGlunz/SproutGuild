@@ -14,6 +14,11 @@
       return true;
     }
   },
+  userAvatar: function(){
+    var author = Meteor.user();
+    if(!!author)
+      return getAvatarUrl(author);
+  },
   requirePostsApproval: function(){
     return getSetting('requirePostsApproval');
   },
@@ -50,5 +55,7 @@ Template.nav.events({
   'click .login-header': function(e){
     e.preventDefault();
     Router.go('/account');
+  },
+  'click .user-avatar': function(e){
   }
 });

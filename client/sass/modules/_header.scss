@@ -26,6 +26,7 @@
 	@include cf;
 	@include border-radius(0 0 3px 3px);
 	//@include box-shadow(0 1px 1px black(1));
+	
 	.site-nav{
 		float:left;
 		margin-left:20px;
@@ -54,28 +55,35 @@
 			height: $logo-height;	
 		}
 	}
-
 	.user-nav{
 		float:right;
-		margin-right:10px;
-		position:relative;
 		z-index:20;
+		display: inline-block;
+		.center{
+
+		}
 		.submit{
 			 background:$sg-green;
+			 //margin-top: 6.5px;
 		}
-	}
-}
-.auth-buttons{
+		.auth-buttons{
 	position:relative;
 	z-index:20;
 	float:right;
-	margin:20px 10px 0 0;
+	.user-avatar{
+			@include border-radius(100px);
+			overflow:hidden;
+			// line-height: 40px;
+				height:40px;
+				width:40px;
+				display:inline-block;
+		}
 	#login-buttons-twitter { 
-		background: $sg-green;
-		border-color: $sg-green;
+		background: $twitter;
+		border-color: $twitter;
 		&:hover{
-			background: $sg-grey;
-			border-color: $sg-grey;
+			background: $sg-green;
+			border-color: $sg-green;
 			}}
 	#login-buttons{
 		position:relative;
@@ -131,6 +139,9 @@
 		}
 	}
 }
+	}
+}
+
 .nav{
 	@include cf;
 	margin-top:20px;
@@ -190,7 +201,7 @@
 	padding-bottom: 2%;	
 	
 	.sub-content{
-		background:black(0.075);
+		background:#eee;
 		@include border-radius(3px);
 		padding-left: 2%;
 		padding-right: 2%;
