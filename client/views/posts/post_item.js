@@ -94,6 +94,9 @@ Template.post_item.helpers({
   },
   locationIsNotEmpty: function(){
     return this.location;
+  },
+  isApproved: function(){
+    return this.status == STATUS_APPROVED;
   }
 });
 
@@ -218,5 +221,13 @@ Template.post_item.events({
     //$(this).toggleClass(".body-preview-expand");
     $expand.removeClass('hidden');
     $this.addClass('hidden');
+},
+  'click .approve-link': function(e, instance){
+    Meteor.call('approvePost', this);
+    e.preventDefault();
+  },  
+  'click .unapprove-link': function(e, instance){
+    Meteor.call('unapprovePost', this);
+    e.preventDefault();
   }
 });

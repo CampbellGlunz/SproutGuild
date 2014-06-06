@@ -1,6 +1,6 @@
 serveRSS = function() {
   var feed = new RSS({
-    title: getSetting('title'),
+    title: getSetting('title', 'Sprout Guild'),
     description: getSetting('tagline'),
     feed_url: Meteor.absoluteUrl()+'feed.xml',
     site_url: Meteor.absoluteUrl(),

@@ -11,19 +11,24 @@ STATUS_PENDING=1;
 STATUS_APPROVED=2;
 STATUS_REJECTED=3;
 
+viewNav = typeof viewNav === 'undefined' ? [] : viewNav;
+viewNav = viewNav.concat([
+  {
+    route: 'posts_top',
+    label: 'Top'
+  },
+  {
+    route: 'posts_new',
+    label: 'New'
+  },
+  {
+    route: 'posts_best',
+    label: 'Best'
+  },
+  {
+    route: 'posts_digest',
+    label: 'Digest'
+  }   
+]);
 
-/** REMOVED NOTIFICATIONS
-// Notifications - only load if user is logged in
-// Not mandatory, because server won't publish anything even if we try to load.
-// Remember about Deps.autorun - user can log in and log out several times
-Deps.autorun(function() {
-  // userId() can be changed before user(), because loading profile takes time
-  if(Meteor.userId()) {
-    Meteor.subscribe('notifications');
-    if(isAdmin(Meteor.user())){
-      // Subscribe to all users for now to make user selection autocomplete work
-      Meteor.subscribe('allUsersAdmin');
-    }
-  }
-});
-**/
+

@@ -5,7 +5,8 @@ Settings = new Meteor.Collection("settings", {
         title: {
             type: String,
             label: "Title",
-            optional: true
+            optional: true,
+            defaultValue: "Sprout Guild"
         },
         tagline: {
             type: String,

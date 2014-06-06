@@ -1,7 +1,4 @@
 Template.post_edit.helpers({
-  post: function () {
-    return Posts.findOne(this.postId);
-  },
   created: function(){
     return moment(this.createdAt).format("MMMM Do, h:mm:ss a");
   },
@@ -31,7 +28,7 @@ Template.post_edit.helpers({
     return moment(this.submitted).format("HH:mm");
   },
   users: function(){
-    return Meteor.users.find().fetch();
+    return Meteor.users.find({}, {sort: {'profile.name': 1}});
   },
   userName: function(){
     return getDisplayName(this);
@@ -51,12 +48,10 @@ Template.post_edit.helpers({
 });
 
 Template.post_edit.rendered = function(){
-  var post = this;
-
+  var post = this.data.post;
   if(post && !this.editor){
-
     this.editor= new EpicEditor(EpicEditorOptions).load();
-    this.editor.importFile('editor',post.body);
+    this.editor.importFile('editor', post.body);
 
     $('#submitted_date').datepicker();
 
@@ -109,7 +104,7 @@ Template.post_edit.events({
         }
       }
       adminProperties = {
-        sticky:     !!$('#sticky').attr('checked'),
+        sticky:     $('#sticky').is(':checked'),
         userId:     $('#postUser').val(),
         status:     status,
       };
