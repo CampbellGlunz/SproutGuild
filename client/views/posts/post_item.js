@@ -95,9 +95,12 @@ Template.post_item.helpers({
   locationIsNotEmpty: function(){
     return this.location;
   },
+  companyNameIsNotEmpty: function(){
+    return this.companyName;
+  },
   isApproved: function(){
     return this.status == STATUS_APPROVED;
-  }
+  },
 });
 
 var recalculatePosition = function ($object, pArray) {

@@ -42,6 +42,7 @@ Template.post_submit.events({
 
     var title= $('#title').val();
     var location = $('#location').val();
+    var companyName = $('#companyName').val();
     var url = $('#url').val();
     var shortUrl = $('#short-url').val();
     var body = $('#body').val();
@@ -59,6 +60,7 @@ Template.post_submit.events({
         headline: title
       , body: body
       , location: location
+      , companyName: companyName
       , shortUrl: shortUrl
       , categories: categories
       , sticky: sticky
