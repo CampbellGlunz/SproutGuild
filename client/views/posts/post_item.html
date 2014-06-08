@@ -53,9 +53,19 @@
               {{#each categories}}
                 <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
               {{/each}}
-              {{#if locationIsNotEmpty}}
-              <span class="post-domain">[{{location}}]</span>
+            {{#if locationIsNotEmpty companyNameIsNotEmpty }}
+              <span class="post-domain">[{{companyName}}, {{location}}]</span>
+
+              {{else}}
+                {{#if companyNameIsNotEmpty}}
+                <span class="post-domain">[{{companyName}}]</span>
+              {{else}}
+                {{#if locationIsNotEmpty}}
+                <span class="post-domain">[{{location}}]</span>
+            {{/if}}
               {{/if}}
+              {{/if}}
+              
               <span class="comments"> <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} COMMENTS</a></span> | 
               <a class="tweet-post-button" href=''> <img src="https://dev.twitter.com/sites/default/files/images_documentation/bird_blue_16.png"></a><div data-url="{{postLink}}" data-text="{{headline}}" class="share-replace"></div>
           </h3>

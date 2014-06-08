@@ -20,14 +20,6 @@
           <div class="controls"><input id="short-url" type="text" value="{{shortUrl}}" /></div>
         </div>
         {{/if}}
-        <div class="control-group">
-          <label class="control-label">{{i18n "Company Location"}}</label>
-          <div class="controls"><input id="location" type="text" value="{{location}}" /></div>
-        </div>
-        <div class="control-group">
-          <label class="control-label post-form-body">{{i18n "Body"}}</label>
-          <div class="controls" id="editor"><textarea id="body" value="" class="input-xlarge">{{body}}</textarea></div>
-        </div>
         {{#if categoriesEnabled}}
         <div class="control-group post-form-category">
           <label class="control-label">{{i18n "Categories"}}</label>
@@ -40,6 +32,18 @@
           </div>
         </div>
         {{/if}}
+        <div class="control-group">
+          <label class="control-label">{{i18n "Company Name"}}</label>
+          <div class="controls"><input id="companyName" type="text" value="{{companyName}}" /></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">{{i18n "Company Location"}}</label>
+          <div class="controls"><input id="location" type="text" value="{{location}}" /></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label post-form-body">{{i18n "Body"}}</label>
+          <div class="controls" id="editor"><textarea id="body" value="" class="input-xlarge">{{body}}</textarea></div>
+        </div>
         {{#if isAdmin}}
           <div class="control-group post-form-sticky">
             <label class="control-label">{{i18n "Inactive?"}}</label>

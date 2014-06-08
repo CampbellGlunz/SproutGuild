@@ -66,6 +66,7 @@ Template.post_edit.events({
     var post = this;
     var categories = [];
     var location = $('#location').val();
+    var companyName = $('#companyName').val();
     var url = $('#url').val();
     var shortUrl = $('#short-url').val();
     var status = parseInt($('input[name=status]:checked').val());
@@ -84,6 +85,7 @@ Template.post_edit.events({
 
     var properties = {
       location:         location,
+      companyName:       companyName, 
       headline:         $('#title').val(),
       shortUrl:         shortUrl,
       body:             instance.editor.exportFile(),
