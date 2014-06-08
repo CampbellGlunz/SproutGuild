@@ -53,9 +53,8 @@
               {{#each categories}}
                 <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
               {{/each}}
-            {{#if locationIsNotEmpty companyNameIsNotEmpty }}
+            {{#if companyAndLocation }}
               <span class="post-domain">[{{companyName}}, {{location}}]</span>
-
               {{else}}
                 {{#if companyNameIsNotEmpty}}
                 <span class="post-domain">[{{companyName}}]</span>
