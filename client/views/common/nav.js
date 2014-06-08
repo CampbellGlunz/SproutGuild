@@ -1,6 +1,6 @@
   Template.nav.helpers({
   site_title: 'Sprout Guild',
-  logo_url: 'img/SproutGuild_rgb_150dpi.jpg',
+  logo_url: '../img/SproutGuild_rgb_150dpi.jpg',
   logo_height: 55.5,
   logo_width: 187.5,
   intercom: function(){
@@ -23,13 +23,19 @@
     return getSetting('requirePostsApproval');
   },
   hasCategories: function(){
-    return Categories.find().count();
+    return typeof Categories !== 'undefined' && Categories.find().count();
   },
   categories: function(){
     return Categories.find({}, {sort: {name: 1}});
   },
   categoryLink: function () {
     return getCategoryUrl(this.slug);
+  },
+  viewNav: function () {
+    return viewNav;
+  },
+  adminNav: function () {
+    return adminNav;
   }
 });
 
