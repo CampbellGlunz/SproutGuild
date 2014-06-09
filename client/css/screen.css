@@ -796,11 +796,11 @@ body.pageslide-open {
         .header .user-nav .auth-buttons #login-buttons #login-buttons-logout {
           color: white;
           border: none;
-          font-family: inherit;
-          font-size: inherit;
+          font-size: 16px;
           padding: 0;
           height: 26px;
-          text-shadow: none; }
+          text-shadow: none;
+          background-color: #a0ce67; }
 
 /* line 145, ../sass/modules/_header.scss */
 .nav {

@@ -63,5 +63,13 @@ Template.nav.events({
     Router.go('/account');
   },
   'click .user-avatar': function(e){
+    e.preventDefault();
+    Accounts._loginButtonsSession.set('dropdownVisible', true);
+  },
+  'click #login-name-link': function(e){
+    e.preventDefault();
+    $('#login-buttons-open-change-password').addClass('hidden');
+    $('#login-buttons-logout').before('<a href="/users/'+Meteor.user().slug+'" class="account-link button">View Profile</a>');
+    $('#login-buttons-logout').before('<a href="/account" class="account-link button">Edit Account</a>');
   }
 });
