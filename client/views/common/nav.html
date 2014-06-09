@@ -45,11 +45,13 @@
         <a class="admin" href="/">{{i18n "Administration"}}</a>
         <div class="dropdown-menu">
           <ul role="menu" aria-labelledby="dLabel">
-            <!---<li><a class="pending" href="/pending">{{i18n "Pending"}}</a></li>
-            <li><a class="users" href="/all-users">{{i18n "Users"}}</a></li>
+          <li><a class="users" href="/all-users">{{i18n "Users"}}</a></li>
+          <li><a class="logs" href="/logs">{{i18n "Logs"}}</a></li>
+             <!---<li><a class="pending" href="/pending">{{i18n "Pending"}}</a></li>
+            
             <li><a class="settings" href="/settings">{{i18n "Settings"}}</a></li>
             <li><a class="categories" href="/categories">{{i18n "Categories"}}</a></li>
-            <li><a class="logs" href="/logs">{{i18n "Logs"}}</a></li>
+            
             <li><a class="categories" href="/toolbox">{{i18n "Toolbox"}}</a></li>-->
             {{#each adminNav}}
               {{> navItem this}}
@@ -67,7 +69,7 @@
       <li class="center">
         <div class="auth-buttons">
             {{> loginButtons align="right"}}
-            <!-- <img class="user-avatar hidden" src="{{userAvatar}}"/> -->
+            <!-- the worlds not ready for this <img class="user-avatar" src="{{userAvatar}}"/>-->
         </div> 
       </li>
       <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
