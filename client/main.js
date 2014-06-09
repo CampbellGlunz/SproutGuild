@@ -21,10 +21,10 @@ viewNav = viewNav.concat([
     route: 'posts_new',
     label: 'New'
   },
-  {
-    route: 'posts_best',
-    label: 'Best'
-  },
+  // {
+  //   route: 'posts_best',
+  //   label: 'Best'
+  // },
   {
     route: 'posts_digest',
     label: 'Digest'

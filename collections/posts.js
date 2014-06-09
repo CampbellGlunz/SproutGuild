@@ -27,6 +27,7 @@ Meteor.methods({
         body = cleanUp(post.body),
         user = Meteor.user(),
         userId = user._id,
+        rank = 0,
         submitted = parseInt(post.submitted) || new Date().getTime(),
         defaultStatus = getSetting('requirePostsApproval') ? STATUS_PENDING : STATUS_APPROVED,
         status = post.status || defaultStatus,
@@ -68,6 +69,7 @@ Meteor.methods({
     post = _.extend(post, {
       headline: headline,
       body: body,
+      rank: rank,
       userId: userId,
       author: getDisplayNameById(userId),
       createdAt: new Date().getTime(),

@@ -1,5 +1,5 @@
 <template name="posts_digest">
-  <div class="grid">
+<!--   <div class="grid">
     <div class="grid-block">
       {{i18n "The top 5 posts of each day."}} |
     {{#if showPreviousDate}}
@@ -10,16 +10,14 @@
     <a href="{{nextDateURL}}" class="next-link">{{i18n "Next Day"}}</a>
     {{/if}}
     </div>
-  </div>
-  {{#if hasPosts}}
+  </div> -->
+
     <div class="posts grid list">
       {{#each posts}}
-        {{> post_item}}
-      {{/each}}
+        {{#if isFirstDate}}
+         {{createdAtFormatted}}
+       {{/if}}
+        {{> post_item}}
+      {{/each}}
     </div>
-  {{else}}
-    <div class="grid-small grid-block dialog">
-      <p>{{i18n "Sorry, no posts for today"}}.</p>
-    </div>
-  {{/if}}
 </template>
