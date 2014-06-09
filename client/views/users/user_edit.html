@@ -1,5 +1,5 @@
 <template name="user_edit">
-  <div class="grid-small grid-block dialog user-edit">
+  <div class="grid-medium grid-block dialog user-edit">
   	{{#with user}}
     {{#if profileIncomplete}}
     <div>
@@ -74,9 +74,6 @@
           {{/if}}
           <label class="checkbox">
             <input id="notifications_posts" type="checkbox" name="notifications_posts" {{hasNotificationsPosts}} /> {{i18n "New Posts"}}
-          </label>
-          <label class="checkbox">
-            <input id="notifications_comments" type="checkbox" name="notifications_comments" {{hasNotificationsComments}} /> {{i18n "Comments on my posts"}}
           </label>
           <label class="checkbox">
             <input id="notifications_replies" type="checkbox" name="notifications_replies" {{hasNotificationsReplies}} /> {{i18n "Replies to my comments"}}
