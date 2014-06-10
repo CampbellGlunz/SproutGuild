@@ -65,13 +65,13 @@ Accounts.onCreateUser(function(options, user){
 
 getEmailHash = function(user){
   // todo: add some kind of salt in here
-  return CryptoJS.MD5(getEmail(user).trim().toLowerCase() + user.createdAt).toString();
+  return CryptoJS.MD5(getEmail(user).trim().toLowerCase()).toString();
 };
 
 addToMailChimpList = function(user){
   // add a user to a MailChimp list.
   // called when a new user is created, or when an existing user fills in their email
-  if((MAILCHIMP_API_KEY='4658c65e711ae0743a1974dc5f833b4e-us8') && (MAILCHIMP_LIST_ID='32e0afdc6a')){
+  if((MAILCHIMP_API_KEY='c568e34f6f344af288f95018a53f413f-us8') && (MAILCHIMP_LIST_ID='9bfb7d9c46')){
 
     var email = getEmail(user);
     if (! email)
