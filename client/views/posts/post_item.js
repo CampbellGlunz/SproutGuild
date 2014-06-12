@@ -98,9 +98,6 @@ Template.post_item.helpers({
   companyNameIsNotEmpty: function(){
     return this.companyName;
   },
-  companyAndLocation: function(){
-    return this.companyName && this.location;
-  },
   isApproved: function(){
     return this.status == STATUS_APPROVED;
   },
