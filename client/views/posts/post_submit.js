@@ -3,7 +3,7 @@ Template.post_submit.helpers({
     return Categories.find().count();
   },
   categories: function(){
-    return Categories.find();
+    return Categories.find({}, {sort: {name: 1 }});
   },
   users: function(){
     return Meteor.users.find();

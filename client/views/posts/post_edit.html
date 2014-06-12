@@ -25,7 +25,7 @@
           <label class="control-label">{{i18n "Categories"}}</label>
           <div class="controls">
             {{#each categories}}
-            <label class="radio inline">
+            <label class="radio inline category">
               <input id="category_{{_id}}" type="checkbox" value="{{_id}}" name="category" {{checked}} /> {{name}}
             </label>
             {{/each}}
