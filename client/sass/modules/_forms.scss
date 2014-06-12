@@ -32,12 +32,18 @@ form, .accounts-dialog{
 				}
 			}
 			label{
-				display:block;
+				display:inline-block;
 				margin-bottom:5px;
 			}
 			label.inline{
-				display:inline-block;
-				margin-bottom:0;
+				float:left;
+				padding-left: 10px;
+				padding-right: 10px;
+
+			}
+			label.inline.radio.category:nth-child(6n+7){
+			  clear:left;
+			  float:left;
 			}
 		}
 		&.inline{
