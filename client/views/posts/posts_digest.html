@@ -16,7 +16,8 @@
     {{formattedDay}}
     </div> -->
     {{#each days}}
-      <div class="day-display">{{day}}</div>
+    <div class="grid-block">
+      <div class="day-display">{{day}}</div> 
   {{#if hasPosts}}
     <div class="posts grid list">
       {{#each dayposts}}
@@ -28,6 +29,8 @@
       <p>{{i18n "Sorry, no posts for today"}}.</p>
     </div>
   {{/if}}
+  </div>
   {{/each}}
 </div>
+
 </template>
