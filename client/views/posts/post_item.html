@@ -48,22 +48,18 @@
           {{/if}}
          -->  
           <h3 class="post-heading">
+            {{#if companyNameIsNotEmpty}}
+              <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{companyName}} - {{headline}}</a>
+            {{else}}
             <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>
+            {{/if}}
             <!--{{#if url}}<span class="post-domain">{{domain}}</span>{{/if}}-->
               {{#each categories}}
                 <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
               {{/each}}
-            {{#if companyAndLocation }}
-              <span class="post-domain">[{{companyName}}, {{location}}]</span>
-              {{else}}
-                {{#if companyNameIsNotEmpty}}
-                <span class="post-domain">[{{companyName}}]</span>
-              {{else}}
-                {{#if locationIsNotEmpty}}
-                <span class="post-domain">[{{location}}]</span>
+            {{#if locationIsNotEmpty }}
+              <span class="post-domain">[{{location}}]</span>  
             {{/if}}
-              {{/if}}
-              {{/if}}
               
               <span class="comments"> <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} COMMENTS</a></span> | 
               <a class="tweet-post-button" href=''> <img src="https://dev.twitter.com/sites/default/files/images_documentation/bird_blue_16.png"></a><div data-url="{{postLink}}" data-text="{{headline}}" class="share-replace"></div>
