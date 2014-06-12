@@ -19,11 +19,11 @@
     <div class="grid-block">
       <div class="day-display">{{day}}</div> 
   {{#if hasPosts}}
-    <div class="posts grid list">
+    <!-- <div class="posts grid list"> -->
       {{#each dayposts}}
         {{> post_item}}
       {{/each}}
-    </div>
+    <!-- </div> -->
   {{else}}
     <div class="grid-small grid-block dialog">
       <p>{{i18n "Sorry, no posts for today"}}.</p>

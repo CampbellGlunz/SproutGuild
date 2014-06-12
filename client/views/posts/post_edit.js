@@ -24,9 +24,6 @@ Template.post_edit.helpers({
   submittedDate: function(){
     return moment(this.submitted).format("MM/DD/YYYY");
   },
-  submittedTime: function(){
-    return moment(this.submitted).format("HH:mm");
-  },
   users: function(){
     return Meteor.users.find({}, {sort: {'profile.name': 1}});
   },
