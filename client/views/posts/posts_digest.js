@@ -1,6 +1,9 @@
 Template.posts_digest.helpers({
-  days: function(){
-    var days = [];
+  dayss: function(){
+    var days = { day: [
+        { name : "Test1"},
+        { name : "Test2"},
+      ] };
     var currentDate=moment(Session.get('currentDate'));
 
     var oldestPost = Posts.findOne({},{sort: {submitted:1}});
@@ -15,14 +18,14 @@ Template.posts_digest.helpers({
       //var posts = Posts.find({submitted: m}, {sort: {score: -1}});
       days += m.format('DD-MM-YYYY') + " " ;
     }
-    return posts;
+    return days;
   },
   formattedDate: function(){
     return moment(this.submitted).format('MM/DD/YYYY');
   },
   hasPosts: function(){
-    if(this.posts) // XXX
-      return !!this.posts.count();  
+    if(this.dayposts) // XXX
+      return !!this.dayposts.count();  
   },
   currentDate: function(){
     var currentDate=moment(Session.get('currentDate'));

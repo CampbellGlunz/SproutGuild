@@ -15,11 +15,11 @@
     <div class='grid-block'>
     {{formattedDay}}
     </div> -->
-    {{days}}
+    {{#each days}}
+      <div class="day-display">{{day}}</div>
   {{#if hasPosts}}
     <div class="posts grid list">
-      {{#each posts}}
-      {{formattedDate}}
+      {{#each dayposts}}
         {{> post_item}}
       {{/each}}
     </div>
@@ -28,5 +28,6 @@
       <p>{{i18n "Sorry, no posts for today"}}.</p>
     </div>
   {{/if}}
+  {{/each}}
 </div>
 </template>
