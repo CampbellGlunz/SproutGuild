@@ -7,4 +7,18 @@
     font-weight: bold;
     color: $sg-green;
       }
+      a.twitter{
+        color: $twitter;
+          &:hover{
+            color: $dark-grey;
+          }
+      }
+      a.email{
+        color: $dark-grey;
+        &:hover{
+          color: $hover;
+        }
+      }
+
+
   }
