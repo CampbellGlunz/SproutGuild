@@ -79,10 +79,9 @@ Meteor.methods({
       status: status
     });
 
-    if(status == STATUS_APPROVED){
+    //was prev on STATUS_APPROVED
       // if post is approved, set its submitted date (if post is pending, submitted date is left blank)
       post.submitted  = submitted;
-    }
 
     postId = Posts.insert(post);
 
