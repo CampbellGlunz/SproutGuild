@@ -41,9 +41,10 @@ form, .accounts-dialog{
 				padding-right: 10px;
 
 			}
-			label.inline.radio.category:nth-child(6n+7){
+			label.inline.radio.category:nth-child(5n+6){
 			  clear:left;
 			  float:left;
+			  color:blue;
 			}
 		}
 		&.inline{
