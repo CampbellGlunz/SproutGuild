@@ -48,11 +48,14 @@
           {{/if}}
          -->  
           <h3 class="post-heading">
+            <div>
             {{#if companyNameIsNotEmpty}}
-              <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{companyName}} - {{headline}}</a>
+              <p class="post-title-company">{{companyName}}</p> - 
+              <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>
             {{else}}
             <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>
             {{/if}}
+          </div>
             <!--{{#if url}}<span class="post-domain">{{domain}}</span>{{/if}}-->
               {{#each categories}}
                 <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
