@@ -126,13 +126,21 @@
 			color:$text;
 			font-weight:normal;
 			line-height:1;
-			&:visited{
-				color:$sg-grey;
-			}
-			&:hover{
-				color:$hover;
-			}	
+				&:visited{
+					color:$sg-grey;
+				}
+				&:hover{
+					color:$hover;
+				}	
 		}
+	.post-title-company{
+			font-size:18px;
+			color:$dark-grey;
+			font-weight:bold;
+			line-height:1;
+			display: inline-block;
+	}
+
 		.post-domain{
 			color:$light-text;
 			font-size:14px;
