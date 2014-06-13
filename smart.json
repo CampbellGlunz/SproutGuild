@@ -1,7 +1,6 @@
 {
   "meteor": {},
   "packages": {
-    "momentjs": {},
     "crypto-base": {},
     "crypto-md5": {},
     "iron-router": {},
