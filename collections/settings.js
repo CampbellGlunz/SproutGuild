@@ -70,7 +70,7 @@ Settings = new Meteor.Collection("settings", {
         },
         postsPerPage: {
             type: Number,
-            defaultValue: 10,
+            defaultValue: 30,
             optional: true
         },
         logoUrl: {
