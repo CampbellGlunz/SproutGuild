@@ -984,7 +984,7 @@ body.pageslide-open {
   margin-right: 160px; }
   /* line 36, ../sass/modules/_posts.scss */
   .post-content .post-avatar {
-    padding-right: 4px;
+    margin-right: 4px;
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
     border-radius: 100px;
