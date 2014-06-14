@@ -101,6 +101,18 @@ Template.post_item.helpers({
   isApproved: function(){
     return this.status == STATUS_APPROVED;
   },
+  has_comments: function(){
+    var post = this;
+    Meteor.subscribe('postComments', post._id);
+    var comments = Comments.find({post: post._id}, {sort: {submitted: -1}});
+    return comments.count() > 0;
+  },
+  child_comments: function(){
+    var post = this;
+    Meteor.subscribe('postComments', post._id);
+    var comments = Comments.find({post: post._id}, {sort: {submitted: -1}});
+    return comments;
+  }
 });
 
 var recalculatePosition = function ($object, pArray) {
