@@ -2,9 +2,9 @@
   <div id="" class="mobile-nav">
     <div>
       <ul>
+        <li><a class="about" href="/about">{{i18n "About"}}</a></li>
         <li><a class="top" href="/top">{{i18n "Top"}}</a></li>
         <li><a class="new" href="/new">{{i18n "New"}}</a></li>
-        <li><a class="digest" href="/digest">{{i18n "Digest"}}</a></li>
         {{#if currentUser.isAdmin}}
           <li><a class="users" href="/users">{{i18n "Users"}}</a></li>
           <li><a class="settings" href="/settings">{{i18n "Settings"}}</a></li>
