@@ -72,20 +72,24 @@ addToMailChimpList = function(user){
   // add a user to a MailChimp list.
   // called when a new user is created, or when an existing user fills in their email
   if((MAILCHIMP_API_KEY='c568e34f6f344af288f95018a53f413f-us8') && (MAILCHIMP_LIST_ID='9bfb7d9c46')){
+    var mailChimp = new MailChimpAPI(MAILCHIMP_API_KEY, { version : '1.3', secure : false });
 
     var email = getEmail(user);
+    var mailChimpEmail = mailChimp.listMemberInfo({id: MAILCHIMP_LIST_ID, email_address: email});
+    console.log(mailChimpEmail.success);
     if (! email)
       throw 'User must have an email address';
-
+    if (mailChimpEmail.success > 0)
+      throw 'Email address already subscribed';
+    else {
     console.log('adding "'+email+'" to MailChimp list…');
     
-    var mailChimp = new MailChimpAPI(MAILCHIMP_API_KEY, { version : '1.3', secure : false });
-    
     mailChimp.listSubscribe({
-      id: MAILCHIMP_LIST_ID,
-      email_address: email,
-      double_optin: false
-    });
+    id: MAILCHIMP_LIST_ID,
+    email_address: email,
+    double_optin: false
+  }); 
+    }
   }
 };
 
@@ -117,6 +121,6 @@ Meteor.methods({
     Meteor.users.update(user._id, {$set : {email_hash : email_hash}});
   },
   addCurrentUserToMailChimpList: function(){
-    addToMailChimpList(Meteor.user());
+    addToMailChimpList(Meteor.user()); 
   }
 });

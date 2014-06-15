@@ -17,3 +17,16 @@ MailChimpAPI.prototype.listSubscribe = function(options) {
   
   return future.wait();
 }
+
+MailChimpAPI.prototype.listMemberInfo = function(options) {
+  var future = new Future();
+  this.asyncAPI.listMemberInfo(options, function(err, res) {
+    if (err) {
+      future.throw(err);
+    } else {
+      future.return(res);
+    }
+  });
+  
+  return future.wait();
+}

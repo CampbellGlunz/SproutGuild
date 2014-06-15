@@ -25,10 +25,16 @@ Template.user_email.events({
       if(error){
         throwError(error.reason);
       } else {
-        throwError(i18n.t('Thanks for signing up!'));
-        Meteor.call('addCurrentUserToMailChimpList');
-        trackEvent("new sign-up", {'userId': user._id, 'auth':'twitter'});
-        Router.go('/');
+        Meteor.call('addCurrentUserToMailChimpList',function(error){
+        if(error){
+          throwError(i18n.t('Email address already subscribed'));
+        }
+        else {
+          throwError(i18n.t('Thanks for signing up!'));
+          trackEvent("new sign-up", {'userId': user._id, 'auth':'twitter'});
+          Router.go('/');
+        }
+      }); 
       }
     });
   }
