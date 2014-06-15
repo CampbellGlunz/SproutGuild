@@ -28,7 +28,7 @@
 	//@include box-shadow(0 1px 1px black(1));
 	
 	.site-nav{
-		float:left;
+		float:right;
 		margin-left:20px;
 		position:relative;
 		z-index:20;
@@ -54,6 +54,14 @@
 			border-bottom: 10px;
 			height: $logo-height;	
 		}
+	}
+	.tagline{
+		text-transform: lowercase;
+		display:inline-block;
+		z-index: 20;
+		text-align: center;
+		margin-top: 20px;
+
 	}
 	.user-nav{
 		float:right;
