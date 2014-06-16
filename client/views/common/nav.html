@@ -12,7 +12,22 @@
     {{else}}
       <h1 class="logo grow"><a href="/">{{site_title}}</a></h1>
     {{/if}}
-    <h3 class="tagline desktop">Daily Discovery of the Hippest New Natural Foods, Products &amp; Brands</h3>
+    <span class="nav tagline desktop">Daily Discovery of the Hippest New Natural Foods, Products &amp; Brands</span>
+    
+    {{#if canView}}
+    <ul class="nav user-nav desktop">
+      <li >
+        <div class="auth-buttons">
+            {{> loginButtons align="right"}}
+            <!-- the worlds not ready for this <img class="user-avatar" src="{{userAvatar}}"/>-->
+        </div> 
+      </li>
+      {{#if isUser}}
+      <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
+      {{/if}}
+    </ul>
+    {{/if}}
+
     <ul class="nav site-nav desktop">
       {{#if canView}}
       {{#if hasCategories}}
@@ -65,17 +80,6 @@
         {{> search}}
       </li> -->
     </ul>
-    {{#if canView}}
-    <ul class="nav user-nav desktop">
-      <li class="center">
-        <div class="auth-buttons">
-            {{> loginButtons align="right"}}
-            <!-- the worlds not ready for this <img class="user-avatar" src="{{userAvatar}}"/>-->
-        </div> 
-      </li>
-      <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
-    </ul>
-    {{/if}}
-
+    
   </header>
 </template>

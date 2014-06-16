@@ -26,14 +26,6 @@
 	@include cf;
 	@include border-radius(0 0 3px 3px);
 	//@include box-shadow(0 1px 1px black(1));
-	
-	.site-nav{
-		float:right;
-		margin-left:20px;
-		position:relative;
-		z-index:20;
-	}
-
 	.logo{
 		float:left;
 		display:inline-block;
@@ -52,21 +44,28 @@
 			display: inline-block;
 			float:left;
 			border-bottom: 10px;
-			height: $logo-height;	
+			height: $logo-height;
+			margin-top: 1px;	
 		}
 	}
 	.tagline{
 		text-transform: lowercase;
-		display:inline-block;
 		z-index: 20;
-		text-align: center;
-		margin-top: 20px;
+		color: $sg-grey;
+		position:relative;
+		font-size: 16px;
+		margin-left: 4px;
 
+	}
+	.site-nav{
+		float:left;
+		margin-left:20px;
+		position:relative;
+		z-index:20;
 	}
 	.user-nav{
 		float:right;
 		z-index:20;
-		display: inline-block;
 		.center{
 
 		}
@@ -75,17 +74,17 @@
 			 //margin-top: 6.5px;
 		}
 		.auth-buttons{
-	position:relative;
-	z-index:20;
-	float:right;
-	.user-avatar{
-			@include border-radius(100px);
-			overflow:hidden;
-			// line-height: 40px;
-				height:40px;
-				width:40px;
-				display:inline-block;
-		}
+		position:relative;
+		z-index:20;
+		float:right;
+			.user-avatar{
+					@include border-radius(100px);
+					overflow:hidden;
+					// line-height: 40px;
+					height:40px;
+					width:40px;
+					display:inline-block;
+				}
 	#login-buttons-twitter { 
 		background: $twitter;
 		border-color: $twitter;
@@ -152,7 +151,7 @@
 
 .nav{
 	@include cf;
-	margin-top:20px;
+	//margin-top:20px;
 	>li{
 		@include horizontal-list-item;
 		margin-right:10px;

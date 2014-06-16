@@ -14,6 +14,11 @@
       return true;
     }
   },
+  isUser: function(){
+    if(Meteor.user()){
+      return true;
+    }
+  },
   userAvatar: function(){
     var author = Meteor.user();
     if(!!author)
