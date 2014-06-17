@@ -16,20 +16,23 @@
     {{formattedDay}}
     </div> -->
     {{#each days}}
-    <div class="grid-block">
-      <div class="day-display">{{day}}</div> 
+    
   {{#if hasPosts}}
+  <div class="grid-block">
+  <div class="day-display">{{day}}</div> 
     <!-- <div class="posts grid list"> -->
       {{#each dayposts}}
         {{> post_item}}
       {{/each}}
     <!-- </div> -->
-  {{else}}
-    <div class="grid-small grid-block dialog">
-      <p>{{i18n "Sorry, no posts for today"}}.</p>
     </div>
+  {{else}}
+    <!-- <div class="grid-small grid-block dialog">
+      <p>{{i18n "Sorry, no posts for today"}}.</p>
+    </div> -->
+  
+  
   {{/if}}
-  </div>
   {{/each}}
 </div>
 

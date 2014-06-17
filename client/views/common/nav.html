@@ -1,8 +1,9 @@
 <template name="nav">
   <header class="header grid">
-
+    
+  <div class="top-row">
     <a id="mobile-menu" href="#menu" class="mobile mobile-button menu"><i class="icon-menu"></i><span>{{i18n "Menu"}}</span></a>
-
+    <div class="top-row-left">
     {{#if logo_url}}
       <h1 class="logo image" >
         <a href="/">
@@ -12,22 +13,12 @@
     {{else}}
       <h1 class="logo grow"><a href="/">{{site_title}}</a></h1>
     {{/if}}
-    <ul class="nav site-nav desktop">
+    <span class="nav tagline desktop">Daily Discovery of the Hippest New Natural Foods, Products &amp; Brands</span>
+    </div>
+    
+    <div class="top-row-right">
+    <ul class="nav user-nav desktop">
       {{#if canView}}
-      <li>
-        <a href="/about">{{i18n "About"}}</a>
-      </li>
-      <li class="dropdown">
-        <a class="View" href="/">{{i18n "View"}}</a>
-        <div class="dropdown-menu">
-          <ul role="menu" aria-labelledby="dLabel">
-            {{#each viewNav}}
-              {{> navItem this}}
-            {{/each}}
-          </ul>
-        </div>
-      </li>
-      {{/if}}
       {{#if hasCategories}}
       <li class="dropdown">
         <a class="categories" href="/">{{i18n "Categories"}}</a>
@@ -40,13 +31,28 @@
         </div>
       </li>
       {{/if}}
+      <li class="dropdown">
+        <a class="View" href="/">{{i18n "View"}}</a>
+        <div class="dropdown-menu">
+          <ul role="menu" aria-labelledby="dLabel">
+            {{#each viewNav}}
+              {{> navItem this}}
+            {{/each}}
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="/about">{{i18n "About"}}</a>
+      </li>
+      {{/if}}
       {{#if isAdmin}}
       <li class="dropdown">
-        <a class="admin" href="/">{{i18n "Administration"}}</a>
+        <a class="admin" href="/">{{i18n "Admin"}}</a>
         <div class="dropdown-menu">
           <ul role="menu" aria-labelledby="dLabel">
           <li><a class="users" href="/all-users">{{i18n "Users"}}</a></li>
           <li><a class="logs" href="/logs">{{i18n "Logs"}}</a></li>
+          
              <!---<li><a class="pending" href="/pending">{{i18n "Pending"}}</a></li>
             
             <li><a class="settings" href="/settings">{{i18n "Settings"}}</a></li>
@@ -60,21 +66,30 @@
         </div>
       </li>
       {{/if}}
-      <li>
-        {{> search}}
-      </li>
+      
+      {{#if canView}}
+        <!-- <ul class="nav user-nav desktop"> -->
+          <li >
+            <div class="auth-buttons">
+                {{> loginButtons align="right"}}
+                <!-- the worlds not ready for this <img class="user-avatar" src="{{userAvatar}}"/>-->
+            </div> 
+          </li>
+          {{#if isUser}}
+          <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
+          {{/if}}
+        <!-- </ul> -->
+      {{/if}}
     </ul>
-    {{#if canView}}
-    <ul class="nav user-nav desktop">
-      <li class="center">
-        <div class="auth-buttons">
-            {{> loginButtons align="right"}}
-            <!-- the worlds not ready for this <img class="user-avatar" src="{{userAvatar}}"/>-->
-        </div> 
-      </li>
-      <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
-    </ul>
-    {{/if}}
-
+    </div>
+  </div>
+  <div class="second-row desktop">
+      <div class="left-second-row">
+      {{> subscribe}}
+      </div>
+    <div class="right-second-row">
+      {{> search}}
+    </div>
+  </div>
   </header>
 </template>

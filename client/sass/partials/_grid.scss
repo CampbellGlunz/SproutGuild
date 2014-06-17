@@ -1,9 +1,9 @@
 // @import "susy";
 
 .grid{
-	width:74%;
-	margin-left:13%;
-	margin-right:13%;
+	width:86%;
+	margin-left:7%;
+	margin-right:7%;
 	@include single-transition(ease-out, margin, 300ms, 0ms);
 	.chat-open &{
 		margin-right:24%;
@@ -56,9 +56,9 @@ $break-large: 1200px;
 				@include span-columns(1, $cols);
 
 			}
-			.tagline{
-				@include span-columns($cols - 1 omega, $cols);		
-			}
+			// .tagline{
+			// 	@include span-columns($cols - 1 omega, $cols);		
+			// }
 		}
 		.project{
 			@include span-columns(1, $cols);
