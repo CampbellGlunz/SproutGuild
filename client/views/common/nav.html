@@ -17,27 +17,6 @@
     </div>
     
     <div class="top-row-right">
-    {{#if canView}}
-    
-    <ul class="nav user-nav desktop">
-      <li >
-        <div class="auth-buttons">
-            {{> loginButtons align="right"}}
-            <!-- the worlds not ready for this <img class="user-avatar" src="{{userAvatar}}"/>-->
-        </div> 
-      </li>
-      {{#if isUser}}
-      <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
-      {{/if}}
-    </ul>
-    
-    {{/if}}
-    <div class="search-box desktop">
-        {{> search}}
-    </div>
-  </div>
-  </div>
-
     <ul class="nav site-nav desktop">
       {{#if canView}}
       {{#if hasCategories}}
@@ -87,9 +66,32 @@
         </div>
       </li>
       {{/if}}
-
-      
+      {{#if canView}}
+        <ul class="nav user-nav desktop">
+          <li >
+            <div class="auth-buttons">
+                {{> loginButtons align="right"}}
+                <!-- the worlds not ready for this <img class="user-avatar" src="{{userAvatar}}"/>-->
+            </div> 
+          </li>
+          {{#if isUser}}
+          <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
+          {{/if}}
+        </ul>
+      {{/if}}
     </ul>
-    
+    </div>
+  </div>
+  <div class="second-row">
+      <div class="left-second-row">
+      {{> subscribe}}
+      </div>
+    <div class="right-second-row">
+      {{> search}}
+      <!-- <div class="search-box desktop">
+          
+      </div> -->
+    </div>
+  </div>
   </header>
 </template>

@@ -24,9 +24,12 @@
 
 .top-row-left{ @include span-columns(8 of 12);}
 .top-row-right{
-	@include span-columns(3 of 12);
+	@include span-columns(4 of 12);
 	margin-top: 24px;
 }
+.second-row{@include span-columns(12);}
+.left-second-row{@include span-columns(10 of 12);}
+.right-second-row{@include span-columns(2 of 12);}
 
 .header{
 	//@include outer-container;
@@ -35,7 +38,6 @@
 	margin-bottom:$grid-margin;
 	height:$grid-unit;
 	position:relative;
-	z-index:100;
 	@include cf;
 	@include border-radius(0 0 3px 3px);
 	//@include box-shadow(0 1px 1px black(1));
@@ -63,7 +65,6 @@
 	}
 	.tagline{
 		text-transform: lowercase;
-		z-index: 20;
 		color: $sg-grey;
 		position:relative;
 		font-size: 16px;
@@ -75,7 +76,7 @@
 	}
 	.user-nav{
 		float:right;
-		z-index:20;
+		z-index:10;
 		.center{
 
 		}
@@ -185,9 +186,10 @@
 	}
 }
 .search-box{
-	
+
 }
 .search{
+	margin-top:3px;
 	float:right;
 	position: relative;
 	margin-right:2px;
@@ -221,10 +223,9 @@
 	}
 }
 .MailChimpListSubscribe{
-	
+	margin: 0;
 	height:auto;
 	padding-bottom: 2%;	
-	
 	.sub-content{
 		background:#eee;
 		@include border-radius(3px);
