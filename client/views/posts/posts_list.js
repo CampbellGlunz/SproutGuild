@@ -20,12 +20,17 @@ Template.posts_list.helpers({
   }
 });
 
-Template.posts_list.rendered = function(){
-  var distanceFromTop = 0;
-  $('.post').each(function(){
-    distanceFromTop += $(this).height();
-  });
-  Session.set('distanceFromTop', distanceFromTop);
-  $('body').css('min-height',distanceFromTop+160);
+
+Template.posts_list.events ({
+  'click .more-link': function(){
+  var y = $(window).scrollTop();
+  var x = $('.post').height()*7;
+ 
+  $('html, body').animate({scrollTop: y + x}, 1000);
+
 }
+
+
+
+});
 
