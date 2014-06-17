@@ -1,8 +1,7 @@
 <template name="nav">
   <header class="header grid">
-
+  <div class="top-row">
     <a id="mobile-menu" href="#menu" class="mobile mobile-button menu"><i class="icon-menu"></i><span>{{i18n "Menu"}}</span></a>
-
     {{#if logo_url}}
       <h1 class="logo image" >
         <a href="/">
@@ -27,8 +26,9 @@
       {{/if}}
     </ul>
     {{/if}}
+    </div>
 
-    <ul class="nav site-nav desktop">
+   <!--  <ul class="nav site-nav desktop">
       {{#if canView}}
       {{#if hasCategories}}
       <li class="dropdown">
@@ -63,23 +63,25 @@
           <ul role="menu" aria-labelledby="dLabel">
           <li><a class="users" href="/all-users">{{i18n "Users"}}</a></li>
           <li><a class="logs" href="/logs">{{i18n "Logs"}}</a></li>
+           -->
              <!---<li><a class="pending" href="/pending">{{i18n "Pending"}}</a></li>
             
             <li><a class="settings" href="/settings">{{i18n "Settings"}}</a></li>
             <li><a class="categories" href="/categories">{{i18n "Categories"}}</a></li>
             
             <li><a class="categories" href="/toolbox">{{i18n "Toolbox"}}</a></li>-->
-            {{#each adminNav}}
+           <!--  {{#each adminNav}}
               {{> navItem this}}
             {{/each}}
           </ul>
         </div>
       </li>
-      {{/if}}
+      {{/if}} -->
+
       <!-- <li>
         {{> search}}
-      </li> -->
-    </ul>
+      </li>
+    </ul> -->
     
   </header>
 </template>

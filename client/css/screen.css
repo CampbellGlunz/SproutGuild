@@ -59,6 +59,12 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
+/* line 2, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 /*================ FUNCTIONS =================*/
 /*================ CLASSES =================*/
 /* line 24, ../sass/partials/_mixins.scss */
@@ -72,9 +78,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
   z-index: 100;
-  -moz-transition: all, 300ms;
-  -o-transition: all, 300ms;
   -webkit-transition: all, 300ms;
+  -moz-transition: all, 300ms;
   transition: all, 300ms; }
 
 /* line 32, ../sass/partials/_mixins.scss */
@@ -393,10 +398,8 @@ body.pageslide-open {
     left: 50%;
     top: -40px;
     opacity: 0;
+    -webkit-transition: ease-out opacity 300ms 0ms;
     -moz-transition: ease-out opacity 300ms 0ms;
-    -o-transition: ease-out opacity 300ms 0ms;
-    -webkit-transition: ease-out opacity 300ms;
-    -webkit-transition-delay: 0ms;
     transition: ease-out opacity 300ms 0ms; }
     /* line 11, ../sass/partials/_tooltips.scss */
     .has-tooltip .tooltip span {
@@ -636,10 +639,8 @@ body.pageslide-open {
   width: 86%;
   margin-left: 7%;
   margin-right: 7%;
+  -webkit-transition: ease-out margin 300ms 0ms;
   -moz-transition: ease-out margin 300ms 0ms;
-  -o-transition: ease-out margin 300ms 0ms;
-  -webkit-transition: ease-out margin 300ms;
-  -webkit-transition-delay: 0ms;
   transition: ease-out margin 300ms 0ms; }
   /* line 8, ../sass/partials/_grid.scss */
   .chat-open .grid {
@@ -686,7 +687,50 @@ body.pageslide-open {
   transform: scale(1.1); }
 
 /* line 20, ../sass/modules/_header.scss */
+.top-row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
+  .top-row:last-child {
+    margin-right: 0; }
+
+/* line 21, ../sass/modules/_header.scss */
+.logo-box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
+  .logo-box:last-child {
+    margin-right: 0; }
+
+/* line 22, ../sass/modules/_header.scss */
+.tagline-box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%; }
+  /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
+  .tagline-box:last-child {
+    margin-right: 0; }
+
+/* line 23, ../sass/modules/_header.scss */
+.site-nav-box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
+  .site-nav-box:last-child {
+    margin-right: 0; }
+
+/* line 25, ../sass/modules/_header.scss */
 .header {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   background: white url("") top center;
   background-color: white;
   margin-bottom: 10px;
@@ -698,6 +742,11 @@ body.pageslide-open {
   -moz-border-radius: 0 0 3px 3px;
   -webkit-border-radius: 0;
   border-radius: 0 0 3px 3px; }
+  /* line 15, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/bourbon/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both; }
   /* line 3, ../sass/partials/_mixins.scss */
   .header:before, .header:after {
     content: "";
@@ -705,7 +754,7 @@ body.pageslide-open {
   /* line 7, ../sass/partials/_mixins.scss */
   .header:after {
     clear: both; }
-  /* line 29, ../sass/modules/_header.scss */
+  /* line 35, ../sass/modules/_header.scss */
   .header .logo {
     float: left;
     display: inline-block;
@@ -715,13 +764,13 @@ body.pageslide-open {
     color: #978991;
     font-size: 30px;
     z-index: 10; }
-    /* line 38, ../sass/modules/_header.scss */
+    /* line 44, ../sass/modules/_header.scss */
     .header .logo a, .header .logo a:visited {
       color: #978991; }
-    /* line 41, ../sass/modules/_header.scss */
+    /* line 47, ../sass/modules/_header.scss */
     .header .logo a, .header .logo a:hover {
       color: #a0ce67; }
-    /* line 42, ../sass/modules/_header.scss */
+    /* line 48, ../sass/modules/_header.scss */
     .header .logo.image {
       left: 0px;
       display: inline-block;
@@ -729,7 +778,7 @@ body.pageslide-open {
       border-bottom: 10px;
       height: 56px;
       margin-top: 1px; }
-  /* line 51, ../sass/modules/_header.scss */
+  /* line 57, ../sass/modules/_header.scss */
   .header .tagline {
     text-transform: lowercase;
     z-index: 20;
@@ -737,25 +786,25 @@ body.pageslide-open {
     position: relative;
     font-size: 16px;
     margin-left: 4px; }
-  /* line 60, ../sass/modules/_header.scss */
+  /* line 66, ../sass/modules/_header.scss */
   .header .site-nav {
     float: left;
     margin-left: 20px;
     position: relative;
     z-index: 20; }
-  /* line 66, ../sass/modules/_header.scss */
+  /* line 72, ../sass/modules/_header.scss */
   .header .user-nav {
     float: right;
     z-index: 20; }
-    /* line 72, ../sass/modules/_header.scss */
+    /* line 78, ../sass/modules/_header.scss */
     .header .user-nav .submit {
       background: #a0ce67; }
-    /* line 76, ../sass/modules/_header.scss */
+    /* line 82, ../sass/modules/_header.scss */
     .header .user-nav .auth-buttons {
       position: relative;
       z-index: 20;
       float: right; }
-      /* line 80, ../sass/modules/_header.scss */
+      /* line 86, ../sass/modules/_header.scss */
       .header .user-nav .auth-buttons .user-avatar {
         -moz-border-radius: 100px;
         -webkit-border-radius: 100px;
@@ -764,35 +813,35 @@ body.pageslide-open {
         height: 40px;
         width: 40px;
         display: inline-block; }
-      /* line 88, ../sass/modules/_header.scss */
+      /* line 94, ../sass/modules/_header.scss */
       .header .user-nav .auth-buttons #login-buttons-twitter {
         background: #4099ff;
         border-color: #4099ff; }
-        /* line 91, ../sass/modules/_header.scss */
+        /* line 97, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons-twitter:hover {
           background: #a0ce67;
           border-color: #a0ce67; }
-      /* line 95, ../sass/modules/_header.scss */
+      /* line 101, ../sass/modules/_header.scss */
       .header .user-nav .auth-buttons #login-buttons {
         position: relative;
         line-height: 26px; }
-        /* line 101, ../sass/modules/_header.scss */
+        /* line 107, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons .account-link {
           display: block;
           color: white !important;
           margin-bottom: 10px;
           float: none; }
-        /* line 107, ../sass/modules/_header.scss */
+        /* line 113, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons a {
           text-decoration: none;
           color: #978991; }
-        /* line 111, ../sass/modules/_header.scss */
+        /* line 117, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons a.login-link-text {
           color: #978991;
           font-weight: normal;
           display: inline-block;
           height: 26px; }
-        /* line 117, ../sass/modules/_header.scss */
+        /* line 123, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons #login-buttons-password {
           float: none !important;
           text-shadow: none;
@@ -800,18 +849,18 @@ body.pageslide-open {
           line-height: 1.5;
           height: 26px;
           margin: 10px 0 !important; }
-        /* line 126, ../sass/modules/_header.scss */
+        /* line 132, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons .login-header {
           font-family: inherit;
           height: 26px;
           margin-right: 10px;
           cursor: pointer;
           color: #978991; }
-          /* line 132, ../sass/modules/_header.scss */
+          /* line 138, ../sass/modules/_header.scss */
           .header .user-nav .auth-buttons #login-buttons .login-header:before {
             color: rgba(255, 255, 255, 0.5);
             content: "Welcome, "; }
-        /* line 137, ../sass/modules/_header.scss */
+        /* line 143, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons #login-buttons-logout {
           color: white;
           border: none;
@@ -821,7 +870,7 @@ body.pageslide-open {
           text-shadow: none;
           background-color: #a0ce67; }
 
-/* line 152, ../sass/modules/_header.scss */
+/* line 158, ../sass/modules/_header.scss */
 .nav {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
@@ -833,7 +882,7 @@ body.pageslide-open {
   /* line 7, ../sass/partials/_mixins.scss */
   .nav:after {
     clear: both; }
-  /* line 155, ../sass/modules/_header.scss */
+  /* line 161, ../sass/modules/_header.scss */
   .nav > li {
     list-style-image: none;
     list-style-type: none;
@@ -852,24 +901,24 @@ body.pageslide-open {
     /* line 52, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/typography/lists/_horizontal-list.scss */
     .nav > li.last {
       padding-right: 0; }
-    /* line 159, ../sass/modules/_header.scss */
+    /* line 165, ../sass/modules/_header.scss */
     .nav > li > a {
       color: #978991;
       font-size: 16px;
       line-height: 26px;
       height: 26px;
       font-weight: normal; }
-      /* line 167, ../sass/modules/_header.scss */
+      /* line 173, ../sass/modules/_header.scss */
       .nav > li > a.intercom em:before {
         content: '('; }
-      /* line 170, ../sass/modules/_header.scss */
+      /* line 176, ../sass/modules/_header.scss */
       .nav > li > a.intercom em:after {
         content: ')'; }
 
-/* line 177, ../sass/modules/_header.scss */
+/* line 183, ../sass/modules/_header.scss */
 .search {
   position: relative; }
-  /* line 179, ../sass/modules/_header.scss */
+  /* line 185, ../sass/modules/_header.scss */
   .search .search-field {
     font-size: 14px;
     padding: 4px 12px;
@@ -880,24 +929,24 @@ body.pageslide-open {
     -webkit-transition: 0.2s all;
     -moz-transition: 0.2s all;
     background: white; }
-    /* line 189, ../sass/modules/_header.scss */
+    /* line 195, ../sass/modules/_header.scss */
     .search .search-field:focus {
       outline: none; }
-  /* line 194, ../sass/modules/_header.scss */
+  /* line 200, ../sass/modules/_header.scss */
   .search.empty .search-field {
     background: rgba(255, 255, 255, 0.1); }
-    /* line 196, ../sass/modules/_header.scss */
+    /* line 202, ../sass/modules/_header.scss */
     .search.empty .search-field:focus {
       background: white; }
-  /* line 200, ../sass/modules/_header.scss */
+  /* line 206, ../sass/modules/_header.scss */
   .search.empty .search-clear {
     display: none; }
 
-/* line 205, ../sass/modules/_header.scss */
+/* line 211, ../sass/modules/_header.scss */
 .MailChimpListSubscribe {
   height: auto;
   padding-bottom: 2%; }
-  /* line 210, ../sass/modules/_header.scss */
+  /* line 216, ../sass/modules/_header.scss */
   .MailChimpListSubscribe .sub-content {
     background: #eee;
     -moz-border-radius: 3px;
@@ -910,16 +959,16 @@ body.pageslide-open {
     color: white;
     line-height: 50px;
     font-size: 16px; }
-    /* line 221, ../sass/modules/_header.scss */
+    /* line 227, ../sass/modules/_header.scss */
     .MailChimpListSubscribe .sub-content .message {
       text-align: left;
       display: inline-block;
       text-transform: bold;
       color: #4a4444; }
-      /* line 226, ../sass/modules/_header.scss */
+      /* line 232, ../sass/modules/_header.scss */
       .MailChimpListSubscribe .sub-content .message:hover {
         color: #a0ce67; }
-    /* line 230, ../sass/modules/_header.scss */
+    /* line 236, ../sass/modules/_header.scss */
     .MailChimpListSubscribe .sub-content .email-input {
       display: inline-block;
       position: relative;
@@ -935,11 +984,11 @@ body.pageslide-open {
       -moz-border-radius: 3px;
       -webkit-border-radius: 3px;
       border-radius: 3px; }
-      /* line 243, ../sass/modules/_header.scss */
+      /* line 249, ../sass/modules/_header.scss */
       .MailChimpListSubscribe .sub-content .email-input:focus {
         outline-color: #a0ce67;
         color: #a0ce67; }
-    /* line 248, ../sass/modules/_header.scss */
+    /* line 254, ../sass/modules/_header.scss */
     .MailChimpListSubscribe .sub-content .email-submit {
       display: inline;
       position: relative;
@@ -974,10 +1023,8 @@ body.pageslide-open {
       clear: both; }
     /* line 19, ../sass/modules/_posts.scss */
     .posts .post.animate {
+      -webkit-transition: ease-out top 400ms 0ms;
       -moz-transition: ease-out top 400ms 0ms;
-      -o-transition: ease-out top 400ms 0ms;
-      -webkit-transition: ease-out top 400ms;
-      -webkit-transition-delay: 0ms;
       transition: ease-out top 400ms 0ms; }
     /* line 23, ../sass/modules/_posts.scss */
     .posts .post.inactive .post-content, .posts .post.inactive .post-actions li a {
@@ -1307,10 +1354,8 @@ body.pageslide-open {
 .queue-container {
   position: relative;
   height: 0px;
+  -webkit-transition: ease-out opacity 400ms 0ms;
   -moz-transition: ease-out opacity 400ms 0ms;
-  -o-transition: ease-out opacity 400ms 0ms;
-  -webkit-transition: ease-out opacity 400ms;
-  -webkit-transition-delay: 0ms;
   transition: ease-out opacity 400ms 0ms; }
   /* line 5, ../sass/modules/_comments.scss */
   .queue-container ul {
@@ -1375,10 +1420,8 @@ body.pageslide-open {
   position: relative; }
   /* line 74, ../sass/modules/_comments.scss */
   .comment .comment-body {
+    -webkit-transition: ease-out opacity 600ms 0ms;
     -moz-transition: ease-out opacity 600ms 0ms;
-    -o-transition: ease-out opacity 600ms 0ms;
-    -webkit-transition: ease-out opacity 600ms;
-    -webkit-transition-delay: 0ms;
     transition: ease-out opacity 600ms 0ms;
     opacity: 1; }
   /* line 79, ../sass/modules/_comments.scss */
@@ -1672,9 +1715,8 @@ form input[type="text"], form input[type="password"], form input[type="number"],
   box-sizing: border-box;
   /* Opera/IE 8+ */
   border: 1px solid #b5b0b0;
-  -moz-transition: border-color 500ms;
-  -o-transition: border-color 500ms;
   -webkit-transition: border-color 500ms;
+  -moz-transition: border-color 500ms;
   transition: border-color 500ms; }
   /* line 115, ../sass/modules/_forms.scss */
   form input[type="text"]:focus, form input[type="password"]:focus, form input[type="number"]:focus, form textarea:focus, form .login-form input:focus, .accounts-dialog input[type="text"]:focus, .accounts-dialog input[type="password"]:focus, .accounts-dialog input[type="number"]:focus, .accounts-dialog textarea:focus, .accounts-dialog .login-form input:focus {
@@ -1889,10 +1931,8 @@ table {
   top: 0px;
   left: -200px;
   background: #f3f3f3;
+  -webkit-transition: ease-out left 400ms 0ms;
   -moz-transition: ease-out left 400ms 0ms;
-  -o-transition: ease-out left 400ms 0ms;
-  -webkit-transition: ease-out left 400ms;
-  -webkit-transition-delay: 0ms;
   transition: ease-out left 400ms 0ms; }
   /* line 9, ../sass/modules/_notifications.scss */
   .notifications .mark-as-read {
@@ -2009,10 +2049,8 @@ table {
 
 /* line 30, ../sass/partials/_mobile.scss */
 .mobile-nav, .content-wrapper {
+  -webkit-transition: ease-out left 300ms 0ms;
   -moz-transition: ease-out left 300ms 0ms;
-  -o-transition: ease-out left 300ms 0ms;
-  -webkit-transition: ease-out left 300ms;
-  -webkit-transition-delay: 0ms;
   transition: ease-out left 300ms 0ms; }
 
 /* line 33, ../sass/partials/_mobile.scss */

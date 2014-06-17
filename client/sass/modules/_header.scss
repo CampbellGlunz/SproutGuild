@@ -17,7 +17,13 @@
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
+.top-row{ @include span-columns(12); }
+.logo-box{ @include span-columns(3 of 12);}
+.tagline-box{ @include span-columns(5 of 12); }
+.site-nav-box{ @include span-columns(3 of 12); }
+
 .header{
+	@include outer-container;
 	background:$highlight-color url("") top center;
 	background-color:$highlight-color;
 	margin-bottom:$grid-margin;
@@ -49,13 +55,13 @@
 		}
 	}
 	.tagline{
+		
 		text-transform: lowercase;
 		z-index: 20;
 		color: $sg-grey;
 		position:relative;
 		font-size: 16px;
 		margin-left: 4px;
-
 	}
 	.site-nav{
 		float:left;
@@ -254,4 +260,5 @@
 		}
 		
 	}
+
 
