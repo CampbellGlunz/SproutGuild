@@ -18,17 +18,24 @@
   transform: scale(1.1);
 }
 .top-row{ @include span-columns(12); }
-.logo-box{ @include span-columns(3 of 12);}
-.tagline-box{ @include span-columns(5 of 12); }
-.site-nav-box{ @include span-columns(3 of 12); }
+// .logo-box{ @include span-columns(3 of 12);}
+// .tagline-box{ @include span-columns(5 of 12); }
+// .site-nav-box{ @include span-columns(3 of 12); }
+
+.top-row-left{ @include span-columns(8 of 12);}
+.top-row-right{
+	@include span-columns(3 of 12);
+	margin-top: 24px;
+}
 
 .header{
-	@include outer-container;
+	//@include outer-container;
 	background:$highlight-color url("") top center;
 	background-color:$highlight-color;
 	margin-bottom:$grid-margin;
 	height:$grid-unit;
 	position:relative;
+	z-index:100;
 	@include cf;
 	@include border-radius(0 0 3px 3px);
 	//@include box-shadow(0 1px 1px black(1));
@@ -55,7 +62,6 @@
 		}
 	}
 	.tagline{
-		
 		text-transform: lowercase;
 		z-index: 20;
 		color: $sg-grey;
@@ -64,9 +70,7 @@
 		margin-left: 4px;
 	}
 	.site-nav{
-		float:left;
-		margin-left:20px;
-		position:relative;
+		float:right;
 		z-index:20;
 	}
 	.user-nav{
@@ -132,7 +136,7 @@
 		.login-header{
 			font-family:inherit;
 			height:26px;
-			margin-right:10px;
+			//margin-right:10px;
 			cursor:pointer;
 			color:$text;
 			&:before{
@@ -180,20 +184,28 @@
 		}
 	}
 }
+.search-box{
+	
+}
 .search{
+	float:right;
 	position: relative;
+	margin-right:2px;
 	.search-field{
-		font-size: 14px;
-		padding: 4px 12px;
+		display:inline-block;
+		position:relative;
+		font-size: 16px;
+		padding: 2px;
 		line-height: 1.3;
-		border-radius: 20px;
-		border: 0px;
-		width: 100px;
+		border: 2px solid $sg-grey;
+		width: auto;
 		-webkit-transition: 0.2s all;
 		-moz-transition: 0.2s all;
-		background: white;
+		background-color: transparent;
+		@include border-radius(3px);
 		&:focus{
-			outline:none;
+			outline-color: $sg-green;
+			color: $sg-green;
 		}
 	}
 	&.empty{
@@ -239,12 +251,11 @@
 			font-size: 16px;
 			padding: 2px;
 			line-height: 1.3;
-			border-radius: 0px;
-			border: 1px solid $text;
+			border: 2px solid $sg-grey;
 			width: auto;
 			-webkit-transition: 0.2s all;
 			-moz-transition: 0.2s all;
-			background-color: transparent;
+			background-color: white;
 			@include border-radius(3px);
 			&:focus{
 				outline-color: $sg-green;

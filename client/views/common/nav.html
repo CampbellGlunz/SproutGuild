@@ -1,7 +1,9 @@
 <template name="nav">
   <header class="header grid">
+    
   <div class="top-row">
     <a id="mobile-menu" href="#menu" class="mobile mobile-button menu"><i class="icon-menu"></i><span>{{i18n "Menu"}}</span></a>
+    <div class="top-row-left">
     {{#if logo_url}}
       <h1 class="logo image" >
         <a href="/">
@@ -12,8 +14,11 @@
       <h1 class="logo grow"><a href="/">{{site_title}}</a></h1>
     {{/if}}
     <span class="nav tagline desktop">Daily Discovery of the Hippest New Natural Foods, Products &amp; Brands</span>
+    </div>
     
+    <div class="top-row-right">
     {{#if canView}}
+    
     <ul class="nav user-nav desktop">
       <li >
         <div class="auth-buttons">
@@ -25,10 +30,15 @@
       <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
       {{/if}}
     </ul>
+    
     {{/if}}
+    <div class="search-box desktop">
+        {{> search}}
     </div>
+  </div>
+  </div>
 
-   <!--  <ul class="nav site-nav desktop">
+    <ul class="nav site-nav desktop">
       {{#if canView}}
       {{#if hasCategories}}
       <li class="dropdown">
@@ -63,25 +73,23 @@
           <ul role="menu" aria-labelledby="dLabel">
           <li><a class="users" href="/all-users">{{i18n "Users"}}</a></li>
           <li><a class="logs" href="/logs">{{i18n "Logs"}}</a></li>
-           -->
+          
              <!---<li><a class="pending" href="/pending">{{i18n "Pending"}}</a></li>
             
             <li><a class="settings" href="/settings">{{i18n "Settings"}}</a></li>
             <li><a class="categories" href="/categories">{{i18n "Categories"}}</a></li>
             
             <li><a class="categories" href="/toolbox">{{i18n "Toolbox"}}</a></li>-->
-           <!--  {{#each adminNav}}
+            {{#each adminNav}}
               {{> navItem this}}
             {{/each}}
           </ul>
         </div>
       </li>
-      {{/if}} -->
+      {{/if}}
 
-      <!-- <li>
-        {{> search}}
-      </li>
-    </ul> -->
+      
+    </ul>
     
   </header>
 </template>

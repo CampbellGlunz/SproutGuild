@@ -696,57 +696,41 @@ body.pageslide-open {
   .top-row:last-child {
     margin-right: 0; }
 
-/* line 21, ../sass/modules/_header.scss */
-.logo-box {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
-  .logo-box:last-child {
-    margin-right: 0; }
-
-/* line 22, ../sass/modules/_header.scss */
-.tagline-box {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
-  .tagline-box:last-child {
-    margin-right: 0; }
-
-/* line 23, ../sass/modules/_header.scss */
-.site-nav-box {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
-  .site-nav-box:last-child {
-    margin-right: 0; }
-
 /* line 25, ../sass/modules/_header.scss */
+.top-row-left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
+  .top-row-left:last-child {
+    margin-right: 0; }
+
+/* line 26, ../sass/modules/_header.scss */
+.top-row-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  margin-top: 24px; }
+  /* line 38, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
+  .top-row-right:last-child {
+    margin-right: 0; }
+
+/* line 31, ../sass/modules/_header.scss */
 .header {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
   background: white url("") top center;
   background-color: white;
   margin-bottom: 10px;
   height: 70px;
   position: relative;
+  z-index: 100;
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   -moz-border-radius: 0 0 3px 3px;
   -webkit-border-radius: 0;
   border-radius: 0 0 3px 3px; }
-  /* line 15, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/bourbon/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
-  .header:after {
-    content: "";
-    display: table;
-    clear: both; }
   /* line 3, ../sass/partials/_mixins.scss */
   .header:before, .header:after {
     content: "";
@@ -754,7 +738,7 @@ body.pageslide-open {
   /* line 7, ../sass/partials/_mixins.scss */
   .header:after {
     clear: both; }
-  /* line 35, ../sass/modules/_header.scss */
+  /* line 42, ../sass/modules/_header.scss */
   .header .logo {
     float: left;
     display: inline-block;
@@ -764,13 +748,13 @@ body.pageslide-open {
     color: #978991;
     font-size: 30px;
     z-index: 10; }
-    /* line 44, ../sass/modules/_header.scss */
+    /* line 51, ../sass/modules/_header.scss */
     .header .logo a, .header .logo a:visited {
       color: #978991; }
-    /* line 47, ../sass/modules/_header.scss */
+    /* line 54, ../sass/modules/_header.scss */
     .header .logo a, .header .logo a:hover {
       color: #a0ce67; }
-    /* line 48, ../sass/modules/_header.scss */
+    /* line 55, ../sass/modules/_header.scss */
     .header .logo.image {
       left: 0px;
       display: inline-block;
@@ -778,7 +762,7 @@ body.pageslide-open {
       border-bottom: 10px;
       height: 56px;
       margin-top: 1px; }
-  /* line 57, ../sass/modules/_header.scss */
+  /* line 64, ../sass/modules/_header.scss */
   .header .tagline {
     text-transform: lowercase;
     z-index: 20;
@@ -786,25 +770,23 @@ body.pageslide-open {
     position: relative;
     font-size: 16px;
     margin-left: 4px; }
-  /* line 66, ../sass/modules/_header.scss */
-  .header .site-nav {
-    float: left;
-    margin-left: 20px;
-    position: relative;
-    z-index: 20; }
   /* line 72, ../sass/modules/_header.scss */
+  .header .site-nav {
+    float: right;
+    z-index: 20; }
+  /* line 76, ../sass/modules/_header.scss */
   .header .user-nav {
     float: right;
     z-index: 20; }
-    /* line 78, ../sass/modules/_header.scss */
+    /* line 82, ../sass/modules/_header.scss */
     .header .user-nav .submit {
       background: #a0ce67; }
-    /* line 82, ../sass/modules/_header.scss */
+    /* line 86, ../sass/modules/_header.scss */
     .header .user-nav .auth-buttons {
       position: relative;
       z-index: 20;
       float: right; }
-      /* line 86, ../sass/modules/_header.scss */
+      /* line 90, ../sass/modules/_header.scss */
       .header .user-nav .auth-buttons .user-avatar {
         -moz-border-radius: 100px;
         -webkit-border-radius: 100px;
@@ -813,35 +795,35 @@ body.pageslide-open {
         height: 40px;
         width: 40px;
         display: inline-block; }
-      /* line 94, ../sass/modules/_header.scss */
+      /* line 98, ../sass/modules/_header.scss */
       .header .user-nav .auth-buttons #login-buttons-twitter {
         background: #4099ff;
         border-color: #4099ff; }
-        /* line 97, ../sass/modules/_header.scss */
+        /* line 101, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons-twitter:hover {
           background: #a0ce67;
           border-color: #a0ce67; }
-      /* line 101, ../sass/modules/_header.scss */
+      /* line 105, ../sass/modules/_header.scss */
       .header .user-nav .auth-buttons #login-buttons {
         position: relative;
         line-height: 26px; }
-        /* line 107, ../sass/modules/_header.scss */
+        /* line 111, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons .account-link {
           display: block;
           color: white !important;
           margin-bottom: 10px;
           float: none; }
-        /* line 113, ../sass/modules/_header.scss */
+        /* line 117, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons a {
           text-decoration: none;
           color: #978991; }
-        /* line 117, ../sass/modules/_header.scss */
+        /* line 121, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons a.login-link-text {
           color: #978991;
           font-weight: normal;
           display: inline-block;
           height: 26px; }
-        /* line 123, ../sass/modules/_header.scss */
+        /* line 127, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons #login-buttons-password {
           float: none !important;
           text-shadow: none;
@@ -849,18 +831,17 @@ body.pageslide-open {
           line-height: 1.5;
           height: 26px;
           margin: 10px 0 !important; }
-        /* line 132, ../sass/modules/_header.scss */
+        /* line 136, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons .login-header {
           font-family: inherit;
           height: 26px;
-          margin-right: 10px;
           cursor: pointer;
           color: #978991; }
-          /* line 138, ../sass/modules/_header.scss */
+          /* line 142, ../sass/modules/_header.scss */
           .header .user-nav .auth-buttons #login-buttons .login-header:before {
             color: rgba(255, 255, 255, 0.5);
             content: "Welcome, "; }
-        /* line 143, ../sass/modules/_header.scss */
+        /* line 147, ../sass/modules/_header.scss */
         .header .user-nav .auth-buttons #login-buttons #login-buttons-logout {
           color: white;
           border: none;
@@ -870,7 +851,7 @@ body.pageslide-open {
           text-shadow: none;
           background-color: #a0ce67; }
 
-/* line 158, ../sass/modules/_header.scss */
+/* line 162, ../sass/modules/_header.scss */
 .nav {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
@@ -882,7 +863,7 @@ body.pageslide-open {
   /* line 7, ../sass/partials/_mixins.scss */
   .nav:after {
     clear: both; }
-  /* line 161, ../sass/modules/_header.scss */
+  /* line 165, ../sass/modules/_header.scss */
   .nav > li {
     list-style-image: none;
     list-style-type: none;
@@ -901,52 +882,59 @@ body.pageslide-open {
     /* line 52, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/typography/lists/_horizontal-list.scss */
     .nav > li.last {
       padding-right: 0; }
-    /* line 165, ../sass/modules/_header.scss */
+    /* line 169, ../sass/modules/_header.scss */
     .nav > li > a {
       color: #978991;
       font-size: 16px;
       line-height: 26px;
       height: 26px;
       font-weight: normal; }
-      /* line 173, ../sass/modules/_header.scss */
+      /* line 177, ../sass/modules/_header.scss */
       .nav > li > a.intercom em:before {
         content: '('; }
-      /* line 176, ../sass/modules/_header.scss */
+      /* line 180, ../sass/modules/_header.scss */
       .nav > li > a.intercom em:after {
         content: ')'; }
 
-/* line 183, ../sass/modules/_header.scss */
+/* line 190, ../sass/modules/_header.scss */
 .search {
-  position: relative; }
-  /* line 185, ../sass/modules/_header.scss */
+  float: right;
+  position: relative;
+  margin-right: 2px; }
+  /* line 194, ../sass/modules/_header.scss */
   .search .search-field {
-    font-size: 14px;
-    padding: 4px 12px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    padding: 2px;
     line-height: 1.3;
-    border-radius: 20px;
-    border: 0px;
-    width: 100px;
+    border: 2px solid #978991;
+    width: auto;
     -webkit-transition: 0.2s all;
     -moz-transition: 0.2s all;
-    background: white; }
-    /* line 195, ../sass/modules/_header.scss */
+    background-color: transparent;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+    /* line 206, ../sass/modules/_header.scss */
     .search .search-field:focus {
-      outline: none; }
-  /* line 200, ../sass/modules/_header.scss */
+      outline-color: #a0ce67;
+      color: #a0ce67; }
+  /* line 212, ../sass/modules/_header.scss */
   .search.empty .search-field {
     background: rgba(255, 255, 255, 0.1); }
-    /* line 202, ../sass/modules/_header.scss */
+    /* line 214, ../sass/modules/_header.scss */
     .search.empty .search-field:focus {
       background: white; }
-  /* line 206, ../sass/modules/_header.scss */
+  /* line 218, ../sass/modules/_header.scss */
   .search.empty .search-clear {
     display: none; }
 
-/* line 211, ../sass/modules/_header.scss */
+/* line 223, ../sass/modules/_header.scss */
 .MailChimpListSubscribe {
   height: auto;
   padding-bottom: 2%; }
-  /* line 216, ../sass/modules/_header.scss */
+  /* line 228, ../sass/modules/_header.scss */
   .MailChimpListSubscribe .sub-content {
     background: #eee;
     -moz-border-radius: 3px;
@@ -959,36 +947,35 @@ body.pageslide-open {
     color: white;
     line-height: 50px;
     font-size: 16px; }
-    /* line 227, ../sass/modules/_header.scss */
+    /* line 239, ../sass/modules/_header.scss */
     .MailChimpListSubscribe .sub-content .message {
       text-align: left;
       display: inline-block;
       text-transform: bold;
       color: #4a4444; }
-      /* line 232, ../sass/modules/_header.scss */
+      /* line 244, ../sass/modules/_header.scss */
       .MailChimpListSubscribe .sub-content .message:hover {
         color: #a0ce67; }
-    /* line 236, ../sass/modules/_header.scss */
+    /* line 248, ../sass/modules/_header.scss */
     .MailChimpListSubscribe .sub-content .email-input {
       display: inline-block;
       position: relative;
       font-size: 16px;
       padding: 2px;
       line-height: 1.3;
-      border-radius: 0px;
-      border: 1px solid #978991;
+      border: 2px solid #978991;
       width: auto;
       -webkit-transition: 0.2s all;
       -moz-transition: 0.2s all;
-      background-color: transparent;
+      background-color: white;
       -moz-border-radius: 3px;
       -webkit-border-radius: 3px;
       border-radius: 3px; }
-      /* line 249, ../sass/modules/_header.scss */
+      /* line 260, ../sass/modules/_header.scss */
       .MailChimpListSubscribe .sub-content .email-input:focus {
         outline-color: #a0ce67;
         color: #a0ce67; }
-    /* line 254, ../sass/modules/_header.scss */
+    /* line 265, ../sass/modules/_header.scss */
     .MailChimpListSubscribe .sub-content .email-submit {
       display: inline;
       position: relative;
