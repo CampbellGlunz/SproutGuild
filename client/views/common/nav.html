@@ -17,7 +17,7 @@
     </div>
     
     <div class="top-row-right">
-    <ul class="nav site-nav desktop">
+    <ul class="nav user-nav desktop">
       {{#if canView}}
       {{#if hasCategories}}
       <li class="dropdown">
@@ -66,9 +66,9 @@
         </div>
       </li>
       {{/if}}
-      </ul>
+      
       {{#if canView}}
-        <ul class="nav user-nav desktop">
+        <!-- <ul class="nav user-nav desktop"> -->
           <li >
             <div class="auth-buttons">
                 {{> loginButtons align="right"}}
@@ -78,9 +78,9 @@
           {{#if isUser}}
           <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
           {{/if}}
-        </ul>
+        <!-- </ul> -->
       {{/if}}
-    
+    </ul>
     </div>
   </div>
   <div class="second-row desktop">
