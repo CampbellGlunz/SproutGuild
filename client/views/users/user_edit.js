@@ -68,6 +68,8 @@ Template.user_edit.events({
       });
     }
     
+    var new_email = $target.find('[name=email]').val();
+    var old_email = getEmail(this);
     
     Meteor.users.update(user._id, {
       $set: update
@@ -75,10 +77,11 @@ Template.user_edit.events({
       if(error){
         throwError(error.reason);
       } else {
-        Meteor.call('addCurrentUserToMailChimpList',function(error){
-        if(error){
-          throwError(i18n.t('Email address already subscribed'));
-        }
+        if (new_email !== old_email){
+          Meteor.call('addCurrentUserToMailChimpList',function(error){
+          if(error){
+            throwError(i18n.t('Email address already subscribed'));
+          }
         else {
           throwError(i18n.t('Profile Updated'));
         }
@@ -87,13 +90,15 @@ Template.user_edit.events({
         $('html, body').animate({scrollTop: element.offset().top});
         });
       });
-        
+        }
+        else {
+          throwError(i18n.t('Profile Updated'));
+        }
+        Deps.afterFlush(function() {
+        var element = $('.grid > .error');
+        $('html, body').animate({scrollTop: element.offset().top});
+        });
       }
-      // Deps.afterFlush(function() {
-      //   var element = $('.grid > .error');
-      //   $('html, body').animate({scrollTop: element.offset().top});
-      // });
     });
-  }
-
+}
 });
