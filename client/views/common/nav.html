@@ -75,7 +75,7 @@
                 <!-- the worlds not ready for this <img class="user-avatar" src="{{userAvatar}}"/>-->
             </div> 
           </li>
-          {{#if isUser}}
+          {{#if isInvited}}
           <li class="center"><a id="submit" class="submit button grow" href="/submit">{{i18n "Post"}}</a></li>
           {{/if}}
         <!-- </ul> -->
@@ -85,11 +85,15 @@
   </div>
   <div class="second-row desktop">
       <div class="left-second-row">
-      {{> subscribe}}
+        {{> subscribe}}
       </div>
-    <div class="right-second-row">
-      {{> search}}
-    </div>
+    {{#if isNotUser}}
+      <div class="right-second-row">
+        {{> search}}
+      </div>
+      {{else}}
+        {{> search}}
+    {{/if}}
   </div>
   </header>
 </template>

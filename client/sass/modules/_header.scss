@@ -26,6 +26,7 @@
 .top-row-right{
 	@include span-columns(4 of 12);
 	margin-top: 24px;
+	float:right;
 }
 .second-row{@include span-columns(12);}
 .left-second-row{@include span-columns(10 of 12);}
@@ -36,7 +37,7 @@
 	background:$highlight-color url("") top center;
 	background-color:$highlight-color;
 	margin-bottom:$grid-margin;
-	height:$grid-unit;
+	//height:$grid-unit;
 	position:relative;
 	@include cf;
 	@include border-radius(0 0 3px 3px);
