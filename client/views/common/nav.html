@@ -85,11 +85,15 @@
   </div>
   <div class="second-row desktop">
       <div class="left-second-row">
-      {{> subscribe}}
+        {{> subscribe}}
       </div>
-    <div class="right-second-row">
-      {{> search}}
-    </div>
+    {{#if isNotUser}}
+      <div class="right-second-row">
+        {{> search}}
+      </div>
+      {{else}}
+        {{> search}}
+    {{/if}}
   </div>
   </header>
 </template>
