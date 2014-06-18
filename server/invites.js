@@ -29,7 +29,7 @@ Meteor.methods({
         properties: {}, 
         userToNotify: invitedUser, 
         userDoingAction: currentUser, 
-        sendEmail: true
+        sendEmail: false
       });
 
     }else{
