@@ -14,7 +14,7 @@
       return true;
     }
   },
-  isUser: function(){
+  isContributor: function(){
     if(Meteor.user()){
       return true;
     }
