@@ -36,7 +36,7 @@
 	background:$highlight-color url("") top center;
 	background-color:$highlight-color;
 	margin-bottom:$grid-margin;
-	height:$grid-unit;
+	//height:$grid-unit;
 	position:relative;
 	@include cf;
 	@include border-radius(0 0 3px 3px);
