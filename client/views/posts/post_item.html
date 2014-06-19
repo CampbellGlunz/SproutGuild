@@ -1,4 +1,5 @@
 <template name="post_item">
+
   {{# with post}}
 
   <div class="post post-{{rank}} {{#if sticky}}sticky{{/if}} {{inactiveClass}}" id="{{_id}}">
@@ -38,8 +39,8 @@
           <h3 class="post-heading">
             <div>
             {{#if companyNameIsNotEmpty}}
-              <p class="post-title-company">{{companyName}}</p> - 
-              <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>
+              <!-- <a  href ="{{postLink}}" class="post-title-company" target="{{postTarget}}">{{companyName}}</a> -  -->
+              <a href="{{postLink}}" class="post-title" target="{{postTarget}}"><span class="post-title-company">{{companyName}}</span> - {{headline}}</a>
             {{else}}
             <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>
             {{/if}}
