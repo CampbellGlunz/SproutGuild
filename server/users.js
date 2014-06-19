@@ -44,20 +44,20 @@ Accounts.onCreateUser(function(options, user){
     addToMailChimpList(user);
 
   // send notifications to admins
-  var admins = Meteor.users.find({isAdmin: true});
-  admins.forEach(function(admin){
-    if(getUserSetting('notifications.users', false, admin)){
-      var notification = getNotificationContents({
-        event: 'newUser',
-        properties: {
-          username: getUserName(user),
-          profileUrl: getProfileUrl(user)
-        },
-        userId: admin._id
-      }, 'email');
-      sendNotification(notification, admin);
-    }
-  });
+  // var admins = Meteor.users.find({isAdmin: true});
+  // admins.forEach(function(admin){
+  //   if(getUserSetting('notifications.users', false, admin)){
+  //     var notification = getNotificationContents({
+  //       event: 'newUser',
+  //       properties: {
+  //         username: getUserName(user),
+  //         profileUrl: getProfileUrl(user)
+  //       },
+  //       userId: admin._id
+  //     }, 'email');
+  //     sendNotification(notification, admin);
+  //   }
+  // });
 
 
   return user;
