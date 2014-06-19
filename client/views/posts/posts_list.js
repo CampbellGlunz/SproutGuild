@@ -22,11 +22,14 @@ Template.posts_list.helpers({
 
 
 Template.posts_list.events ({
-  'click .more-link': function(){
-  var y = $(window).scrollTop();
-  var x = $('.post').height()*7;
+  'click .more-link': function(e){
+  var curWindowHeight = $( window ).height(); // height of current window
+  var n = $('.post').height()*2;
+  var scrollAmount = curWindowHeight-n;
  
-  $('html, body').animate({scrollTop: y + x}, 1000);
+  $('html,body').animate({
+    scrollTop: $(window).scrollTop() + scrollAmount
+      }, 1000);
 
 }
 
