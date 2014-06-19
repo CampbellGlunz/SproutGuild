@@ -129,6 +129,9 @@
 				&:visited{
 					color:$sg-grey;
 				}
+				&:hover{
+				color:$hover;
+			}
 		}
 	.post-title-company{
 			color:$dark-grey;
