@@ -1,3 +1,7 @@
+#lastWord {
+  color: green;
+  font-weight: bold;
+}
 .author{
 
 }
@@ -129,16 +133,13 @@
 				&:visited{
 					color:$sg-grey;
 				}
-				&:hover{
-					color:$hover;
-				}	
 		}
 	.post-title-company{
-			font-size:18px;
 			color:$dark-grey;
 			font-weight:bold;
-			line-height:1;
-			display: inline-block;
+			&:hover{
+				color:$hover;
+			}
 	}
 
 		.post-domain{
@@ -337,7 +338,7 @@
 		width:100%;
 		display:block;
 		height:$grid-unit;
-		background:black(0.075);
+		background:$dark-grey;
 		text-align:center;
 		color:white;
 		line-height:$grid-unit;
