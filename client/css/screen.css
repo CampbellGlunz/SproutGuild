@@ -1156,11 +1156,11 @@ body.pageslide-open {
         color: #a0ce67; }
     /* line 135, ../sass/modules/_posts.scss */
     .post-content .post-heading .post-title-company {
-      font-size: 18px;
       color: #4a4444;
-      font-weight: bold;
-      line-height: 1;
-      display: inline-block; }
+      font-weight: bold; }
+      /* line 138, ../sass/modules/_posts.scss */
+      .post-content .post-heading .post-title-company:hover {
+        color: #a0ce67; }
     /* line 143, ../sass/modules/_posts.scss */
     .post-content .post-heading .post-domain {
       color: #9c9792;
