@@ -23,7 +23,8 @@ clickedPosts = [];
 
 Meteor.methods({
   post: function(post){
-    var headline = cleanUp(post.headline),
+    var companyName = cleanUp(post.companyName),
+        headline = cleanUp(post.headline),
         body = cleanUp(post.body),
         user = Meteor.user(),
         userId = user._id,
@@ -66,6 +67,7 @@ Meteor.methods({
     }
 
     post = _.extend(post, {
+      companyName: companyName,
       headline: headline,
       body: body,
       userId: userId,
