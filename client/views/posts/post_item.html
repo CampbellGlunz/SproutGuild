@@ -57,19 +57,17 @@
               <a class="tweet-post-button" href=''> <img src="https://dev.twitter.com/sites/default/files/images_documentation/bird_blue_16.png"></a><div data-url="{{postLink}}" data-text="{{headline}}" class="share-replace"></div>
           </h3>
           <p class="post-meta">
-          <!--by  <a class="post-author" href="{{profileUrl}}">{{authorName}}</a><span class="comments">, <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} {{commentsDisplayText}}</a></span>-->
-            <div class="comment-list hidden"><ul class="comments comment-list">
-              {{#each child_comments}}
-                {{> comment_item}}
-              {{/each}} 
-             </ul></div>
             <span class="body-preview short">{{bodyPreview}} </span>
             <span class="body-full hidden">{{body}} </span>
             {{#if smallBody}}
             <a class="body-preview-expand" href="#">[+]</a>
             <a class="body-preview-collapse hidden" href="#">[-]</a>
             {{/if}}
-
+            <div class="comment-list hidden"><ul class="comments comment-list">
+              {{#each child_comments}}
+                {{> comment_item}}
+              {{/each}} 
+             </ul></div>
             {{#if can_edit}}
               | <a href="/posts/{{_id}}/edit" class="edit-link goto-edit">Edit</a>
             {{/if}}

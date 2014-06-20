@@ -8,6 +8,7 @@ serveAPI = function(limitSegment){
   Posts.find({status: STATUS_APPROVED}, {sort: {submitted: -1}, limit: limit}).forEach(function(post) {
     var url = (post.url ? post.url : getPostUrl(post._id));
     var properties = {
+     companyName: post.companyName,
      headline: post.headline,
      author: post.author,
      date: post.submitted,
