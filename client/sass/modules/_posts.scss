@@ -31,7 +31,6 @@
 	@extend .grid-block;
 	padding:0;
 	min-height:$grid-unit - 30px;
-	// margin-right:240px;
 	margin-right:160px;
 	.post-avatar{
 		margin-right: 4px;
@@ -185,6 +184,7 @@
 		font-size:14px;
 		color:$light-text;
 		line-height:1.5;
+		padding-left: 44px;
 	}
 }
 .post-actions{
