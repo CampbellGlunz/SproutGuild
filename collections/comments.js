@@ -89,8 +89,8 @@ Meteor.methods({
               event: 'newReply',
               properties: properties,
               userToNotify: parentUser,
-              userDoingAction: user,
-              sendEmail: getUserSetting('notifications.replies', false, parentUser)
+              userDoingAction: user
+              //sendEmail: getUserSetting('notifications.replies', false, parentUser)
             });
           }
 
@@ -101,8 +101,8 @@ Meteor.methods({
               event: 'newComment',
               properties: properties,
               userToNotify: postUser,
-              userDoingAction: user,
-              sendEmail: getUserSetting('notifications.comments', false, postUser)
+              userDoingAction: user
+              //sendEmail: getUserSetting('notifications.comments', false, postUser)
             });
           }
         }
@@ -115,8 +115,8 @@ Meteor.methods({
               event: 'newComment',
               properties: properties,
               userToNotify: postUser,
-              userDoingAction: Meteor.user(),
-              sendEmail: getUserSetting('notifications.comments', false, postUser)
+              userDoingAction: Meteor.user()
+              //sendEmail: getUserSetting('notifications.comments', false, postUser)
             });
           }
         }
