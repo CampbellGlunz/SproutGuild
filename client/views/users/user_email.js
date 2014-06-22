@@ -4,12 +4,18 @@ Template.user_email.helpers({
   }
 });
 
+Template.user_email.rendered=function(){
+  $('[name=username]').val(user.slug);
+};
+
 Template.user_email.events({
   'submit form': function(e){
     e.preventDefault();
     if(!Meteor.user()) throwError(i18n.t('You must be logged in.'));
+
     var $target=$(e.target);
-    var user=Session.get('selectedUserId')? Meteor.users.findOne(Session.get('selectedUserId')) : Meteor.user();
+    //to avoid cookie bug changed from Session.get('selectedUserId')? Meteor.users.findOne(Session.get('selectedUserId')) : 
+    var user=Meteor.user();
     var update = {
       "profile.email": $target.find('[name=email]').val(),
       "username": $target.find('[name=username]').val(),
