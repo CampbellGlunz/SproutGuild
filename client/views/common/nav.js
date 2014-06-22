@@ -1,6 +1,6 @@
   Template.nav.helpers({
   site_title: 'Sprout Guild',
-  logo_url: '../img/SproutGuild_rgb_150dpi.jpg',
+  logo_url: '../img/SproutGuild_rgb_150dpi.png',
   logo_height: 55.5,
   logo_width: 187.5,
   intercom: function(){
