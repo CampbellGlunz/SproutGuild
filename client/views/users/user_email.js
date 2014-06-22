@@ -5,7 +5,8 @@ Template.user_email.helpers({
 });
 
 Template.user_email.rendered=function(){
-  $('[name=username]').val(user.slug);
+  var slug = Meteor.user().slug;
+  $('[name=username]').val(slug);
 };
 
 Template.user_email.events({
@@ -15,15 +16,23 @@ Template.user_email.events({
 
     var $target=$(e.target);
     //to avoid cookie bug changed from Session.get('selectedUserId')? Meteor.users.findOne(Session.get('selectedUserId')) : 
-    var user=Meteor.user();
+    var user = Meteor.user();
     var update = {
       "profile.email": $target.find('[name=email]').val(),
       "username": $target.find('[name=username]').val(),
-        "slug": $target.find('[name=username]').val()
+        "slug": $target.find('[name=username]').val(),
+        "profile.name": $target.find('[name=username]').val()
     };
 
-    // TODO: enable change email
     var email = $target.find('[name=email]').val();
+    if(Meteor.users.find({"profile.email": email }).fetch().length > 0){
+      throwError(i18n.t('Email address already subscribed'));
+      Deps.afterFlush(function() {
+        var element = $('.grid > .error');
+        $('html, body').animate({scrollTop: element.offset().top});
+        });
+      throw "Duplicate Email Error";
+    }
     
     Meteor.users.update(user._id, {
       $set: update
