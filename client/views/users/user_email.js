@@ -4,10 +4,15 @@ Template.user_email.helpers({
   }
 });
 
+Template.user_email.rendered=function(){
+  $('[name=username]').val(user.slug);
+};
+
 Template.user_email.events({
   'submit form': function(e){
     e.preventDefault();
     if(!Meteor.user()) throwError(i18n.t('You must be logged in.'));
+
     var $target=$(e.target);
     var user=Session.get('selectedUserId')? Meteor.users.findOne(Session.get('selectedUserId')) : Meteor.user();
     var update = {
