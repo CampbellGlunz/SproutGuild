@@ -71,6 +71,15 @@ Template.user_edit.events({
     var new_email = $target.find('[name=email]').val();
     var old_email = getEmail(this);
     
+    if((new_email !== old_email) && (Meteor.users.find({"profile.email": new_email }).fetch().length > 0)){
+      throwError(i18n.t('Email address already subscribed'));
+      Deps.afterFlush(function() {
+        var element = $('.grid > .error');
+        $('html, body').animate({scrollTop: element.offset().top});
+        });
+      throw "Duplicate Email Error";
+    }
+    
     Meteor.users.update(user._id, {
       $set: update
     }, function(error){
@@ -79,25 +88,25 @@ Template.user_edit.events({
       } else {
         if (new_email !== old_email){
           Meteor.call('addCurrentUserToMailChimpList',function(error){
-          if(error){
-            throwError(i18n.t('Email address already subscribed'));
-          }
+            if(error){
+              throwError(i18n.t('Email address already subscribed'));
+              }
+            else {
+              throwError(i18n.t('Profile Updated'));
+            }
+              Deps.afterFlush(function() {
+              var element = $('.grid > .error');
+              $('html, body').animate({scrollTop: element.offset().top});
+                });
+              });
+        }
         else {
           throwError(i18n.t('Profile Updated'));
         }
-        Deps.afterFlush(function() {
-        var element = $('.grid > .error');
-        $('html, body').animate({scrollTop: element.offset().top});
-        });
-      });
-        }
-        else {
-          throwError(i18n.t('Profile Updated'));
-        }
-        Deps.afterFlush(function() {
-        var element = $('.grid > .error');
-        $('html, body').animate({scrollTop: element.offset().top});
-        });
+          Deps.afterFlush(function() {
+          var element = $('.grid > .error');
+          $('html, body').animate({scrollTop: element.offset().top});
+          });
       }
     });
 }

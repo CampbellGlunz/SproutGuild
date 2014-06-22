@@ -24,8 +24,15 @@ Template.user_email.events({
         "profile.name": $target.find('[name=username]').val()
     };
 
-    // TODO: enable change email
     var email = $target.find('[name=email]').val();
+    if(Meteor.users.find({"profile.email": email }).fetch().length > 0){
+      throwError(i18n.t('Email address already subscribed'));
+      Deps.afterFlush(function() {
+        var element = $('.grid > .error');
+        $('html, body').animate({scrollTop: element.offset().top});
+        });
+      throw "Duplicate Email Error";
+    }
     
     Meteor.users.update(user._id, {
       $set: update
