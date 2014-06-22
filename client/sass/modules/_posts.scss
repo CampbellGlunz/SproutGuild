@@ -1,6 +1,26 @@
-.author{
+.day-display{
+	color: $sg-brown;
+	text-transform:uppercase;
+	font-weight: bold;
+	background: url('../../img/date.png') no-repeat;
+	padding-left: 26px;
+	position: relative;
+	margin-bottom: 30px;
 
 }
+.date-day{
+	position:absolute;
+	left:5px;
+	top: 7px;
+	font-size: 9px;
+	text-align: center;
+	display: inline-block;
+	width:10px;
+	font-weight: normal;
+	color: $sg-brown;
+
+}
+
 .body{
 	&.hidden{
 		display: hidden;
@@ -155,7 +175,7 @@
 			font-weight:normal;
 			vertical-align:middle;
 			&:hover{
-				background:$hover;
+				background:$sg-yellow;
 				color:white;
 			}
 		}
@@ -211,6 +231,7 @@
 			line-height:50px;
 			&.edit-link{
 				color:$sg-grey;
+				font-size: 100px;
 			}
 			&.share-link{
 				color:$blue;
