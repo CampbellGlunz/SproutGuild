@@ -71,57 +71,57 @@ Meteor.methods({
 
     properties.commentId = newCommentId;
 
-    if(!this.isSimulation){
-      if(parentCommentId){
-        // child comment
-        var parentComment=Comments.findOne(parentCommentId);
-        var parentUser=Meteor.users.findOne(parentComment.userId);
+    // if(!this.isSimulation){
+    //   if(parentCommentId){
+    //     // child comment
+    //     var parentComment=Comments.findOne(parentCommentId);
+    //     var parentUser=Meteor.users.findOne(parentComment.userId);
 
-        properties.parentCommentId = parentCommentId;
-        properties.parentAuthorId = parentComment.userId;
-        properties.parentAuthorName = getDisplayName(parentUser);
+    //     properties.parentCommentId = parentCommentId;
+    //     properties.parentAuthorId = parentComment.userId;
+    //     properties.parentAuthorName = getDisplayName(parentUser);
 
-        if(!this.isSimulation){
-          // reply notification
-          // do not notify users of their own actions (i.e. they're replying to themselves)
-          if(parentUser._id != user._id){
-            createNotification({
-              event: 'newReply',
-              properties: properties,
-              userToNotify: parentUser,
-              userDoingAction: user
-              //sendEmail: getUserSetting('notifications.replies', false, parentUser)
-            });
-          }
+    //     if(!this.isSimulation){
+    //       // reply notification
+    //       // do not notify users of their own actions (i.e. they're replying to themselves)
+    //       if(parentUser._id != user._id){
+    //         createNotification({
+    //           event: 'newReply',
+    //           properties: properties,
+    //           userToNotify: parentUser,
+    //           userDoingAction: user
+    //           //sendEmail: getUserSetting('notifications.replies', false, parentUser)
+    //         });
+    //       }
 
-          // comment notification
-          // if the original poster is different from the author of the parent comment, notify them too
-          if(postUser._id != user._id && parentComment.userId != post.userId){
-            createNotification({
-              event: 'newComment',
-              properties: properties,
-              userToNotify: postUser,
-              userDoingAction: user
-              //sendEmail: getUserSetting('notifications.comments', false, postUser)
-            });
-          }
-        }
-      }else{
-        if(!this.isSimulation){
-          // root comment
-          // don't notify users of their own comments
-          if(postUser._id != user._id){
-            createNotification({
-              event: 'newComment',
-              properties: properties,
-              userToNotify: postUser,
-              userDoingAction: Meteor.user()
-              //sendEmail: getUserSetting('notifications.comments', false, postUser)
-            });
-          }
-        }
-      }
-    }
+    //       // comment notification
+    //       // if the original poster is different from the author of the parent comment, notify them too
+    //       if(postUser._id != user._id && parentComment.userId != post.userId){
+    //         createNotification({
+    //           event: 'newComment',
+    //           properties: properties,
+    //           userToNotify: postUser,
+    //           userDoingAction: user
+    //           //sendEmail: getUserSetting('notifications.comments', false, postUser)
+    //         });
+    //       }
+    //     }
+    //   }else{
+    //     if(!this.isSimulation){
+    //       // root comment
+    //       // don't notify users of their own comments
+    //       if(postUser._id != user._id){
+    //         createNotification({
+    //           event: 'newComment',
+    //           properties: properties,
+    //           userToNotify: postUser,
+    //           userDoingAction: Meteor.user()
+    //           //sendEmail: getUserSetting('notifications.comments', false, postUser)
+    //         });
+    //       }
+    //     }
+    //   }
+    // }
     return properties;
   },
   removeComment: function(commentId){
