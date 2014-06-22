@@ -19,7 +19,7 @@
     
   {{#if hasPosts}}
   <div class="grid-block">
-  <div class="day-display">{{day}}</div> 
+  <div class="day-display"><span class="date-day">{{today}}</span>{{day}}</div> 
     <!-- <div class="posts grid list"> -->
       {{#each dayposts}}
         {{> post_item}}
