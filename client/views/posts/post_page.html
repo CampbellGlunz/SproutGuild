@@ -7,6 +7,9 @@
         {{> comment_form}}
       {{/if}}
       {{> comment_list}}
+      {{#if canNotComment}}
+        {{> signin}}
+      {{/if}}
     </div>
     {{/with}}
   {{/if}}

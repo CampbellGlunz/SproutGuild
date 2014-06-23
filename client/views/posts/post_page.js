@@ -9,6 +9,9 @@ Template.post_page.helpers({
   },
   canComment: function(){
     return canComment(Meteor.user());
+  },
+  canNotComment: function(){
+    return !canComment(Meteor.user());
   }
 }); 
 
