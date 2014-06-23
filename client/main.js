@@ -20,6 +20,10 @@ viewNav = viewNav.concat([
   {
     route: 'posts_new',
     label: 'New'
+  },
+  {
+    route: 'posts_digest',
+    label: 'Daily'
   } 
 ]);
 
