@@ -1,10 +1,10 @@
 Template.comment_form.rendered = function(){
-  if(Meteor.user() && !this.editor){
-    this.editor = new EpicEditor(EpicEditorOptions).load();
-    $(this.editor.editor).bind('keydown', 'meta+return', function(){
-      $(window.editor).closest('form').find('input[type="submit"]').click();
-    });
-  }
+  // if(Meteor.user() && !this.editor){
+  //   this.editor = new EpicEditor(EpicEditorOptions).load();
+  //   $(this.editor.editor).bind('keydown', 'meta+return', function(){
+  //     $(window.editor).closest('form').find('input[type="submit"]').click();
+  //   });
+  // }
 }
 
 Template.comment_form.events({
@@ -12,7 +12,7 @@ Template.comment_form.events({
     e.preventDefault();
     $(e.target).addClass('disabled');
     clearSeenErrors();
-    var content = instance.editor.exportFile();
+    var content = $('#comment').val();
     if(getCurrentTemplate() == 'comment_reply'){
       // child comment
       var parentComment = this.comment;
@@ -36,9 +36,9 @@ Template.comment_form.events({
         }else{
           trackEvent("newComment", commentProperties);
           Session.set('scrollToCommentId', commentProperties.commentId);
-          instance.editor.importFile('editor', '');
         }
       });
     }
+    $('#comment').val("");
   }
 });
