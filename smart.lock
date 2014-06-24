@@ -8,7 +8,8 @@
       "fast-render": {},
       "spin": {},
       "autoform": {},
-      "iron-router-progress": {}
+      "iron-router-progress": {},
+      "paginated-subscription": {}
     },
     "packages": {
       "crypto-base": {
@@ -38,13 +39,18 @@
       },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",
-        "tag": "v0.11.0",
-        "commit": "efdffcdf836a45c50c39696ede15399177ccb9fa"
+        "tag": "v0.13.0",
+        "commit": "3f294ddf3ed0acae714d5ceb8a806b25cdcd0197"
       },
       "iron-router-progress": {
         "git": "https://github.com/Multiply/iron-router-progress.git",
         "tag": "v0.4.0",
         "commit": "02f78bdaca4c13d59f548d5a0ce83408c34b56d1"
+      },
+      "paginated-subscription": {
+        "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
+        "tag": "v0.2.2",
+        "commit": "2133a2163575f569f90253f81314f21b2bf08d20"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
