@@ -142,9 +142,9 @@ Meteor.publish('postsList', function(terms) {
 
 // Never ending posts
 
-Meteor.publish('postsListInf', function(limit) {
+Meteor.publish('postsListInf', function(options) {
   if(canViewById(this.userId)){
-    posts = Posts.find({}, {sort: {submitted: -1}, limit: limit});
+    posts = Posts.find({}, {sort: {submitted: -1}, limit: options});
     return posts;
   }
   return [];

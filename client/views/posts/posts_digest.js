@@ -2,8 +2,7 @@ Template.posts_digest.helpers({
   hasPosts: function(){
     if(this.dayposts) // XXX
       return !!this.dayposts.count();  
-  }
-  
+  },
 });
 
 Template.posts_digest.created = function(){
@@ -19,12 +18,3 @@ Template.posts_digest.created = function(){
   });  
 };
 
-Template.posts_digest.events({
-  'click .more-link': function(e) {
-    e.preventDefault();
-    console.log("FUCK");
-    console.log(this);
-    Session.set('postLimit', 20);
-    Session.set('currentScroll',$('body').scrollTop());
-  }
-});

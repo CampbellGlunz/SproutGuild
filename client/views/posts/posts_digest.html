@@ -16,7 +16,9 @@
     </div> -->
   {{/if}}
 {{/each}}
-<a class="more-link" href="#">MORE</a>
+{{#if nextPath}}
+  <a class="more-link" href="{{nextPath}}">MORE</a>
+{{/if}}
 </div>
 
 </template>
