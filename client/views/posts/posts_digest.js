@@ -3,35 +3,7 @@ Template.posts_digest.helpers({
     if(this.dayposts) // XXX
       return !!this.dayposts.count();  
   }
-  // currentDate: function(){
-  //   var currentDate=moment(Session.get('currentDate'));
-  //   var today=moment(new Date());
-  //   var diff=today.diff(currentDate, 'days');
-  //   if(diff === 1)
-  //     return i18n.t("Today");
-  //   if(diff === 2)
-  //     return i18n.t("Yesterday");
-  //   return currentDate.format("dddd, MMMM Do YYYY");
-  // },
-  // previousDateURL: function(){
-  //   var currentDate=moment(Session.get('currentDate'));
-  //   var newDate=currentDate.subtract('days', 1);
-  //   return getDigestURL(newDate);
-  // },
-  // showPreviousDate: function(){
-  //   // TODO
-  //   return true;
-  // },
-  // nextDateURL: function(){
-  //   var currentDate=moment(Session.get('currentDate'));
-  //   var newDate=currentDate.add('days', 1);
-  //   return getDigestURL(newDate);
-  // },
-  // showNextDate: function(){
-  //   var currentDate=moment(Session.get('currentDate')).startOf('day');
-  //   var today=moment(new Date()).startOf('day');
-  //   return isAdmin(Meteor.user()) || (today.diff(currentDate, 'days') > 0)
-  // }
+  
 });
 
 Template.posts_digest.created = function(){
@@ -47,13 +19,12 @@ Template.posts_digest.created = function(){
   });  
 };
 
-// Template.posts_digest.rendered = function(){
-//   var distanceFromTop = 0;
-//   $('.post').each(function(){
-//     distanceFromTop += $(this).height();
-//   });
-//   distanceFromTop+=55;
-//   Session.set('distanceFromTop', distanceFromTop);
-//   $('body').css('min-height',distanceFromTop+160);
-//   $('.more-button').css('top', distanceFromTop+"px");  
-// }
+Template.posts_digest.events({
+  'click .more-link': function(e) {
+    e.preventDefault();
+    console.log("FUCK");
+    console.log(this);
+    Session.set('postLimit', 20);
+    Session.set('currentScroll',$('body').scrollTop());
+  }
+});

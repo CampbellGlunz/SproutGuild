@@ -7,7 +7,6 @@
     "fast-render": {},
     "spin": {},
     "autoform": {},
-    "iron-router-progress": {},
-    "paginated-subscription": {}
+    "iron-router-progress": {}
   }
 }

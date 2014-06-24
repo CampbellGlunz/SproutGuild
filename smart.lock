@@ -8,8 +8,7 @@
       "fast-render": {},
       "spin": {},
       "autoform": {},
-      "iron-router-progress": {},
-      "paginated-subscription": {}
+      "iron-router-progress": {}
     },
     "packages": {
       "crypto-base": {
@@ -46,11 +45,6 @@
         "git": "https://github.com/Multiply/iron-router-progress.git",
         "tag": "v0.4.0",
         "commit": "02f78bdaca4c13d59f548d5a0ce83408c34b56d1"
-      },
-      "paginated-subscription": {
-        "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
-        "tag": "v0.2.2",
-        "commit": "2133a2163575f569f90253f81314f21b2bf08d20"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
