@@ -7,6 +7,9 @@
         {{> comment_form}}
       {{/if}}
       {{> comment_list}}
+      {{#if canNotComment}}
+        <a href="/signup">Signup to comment!</a>
+      {{/if}}
     </div>
     {{/with}}
   {{/if}}
