@@ -2054,15 +2054,19 @@ table {
     font-weight: bold;
     color: #a0ce67; }
   /* line 10, ../sass/modules/_about.scss */
+  .about-info span.bold {
+    font-weight: bold;
+    color: #695e4a; }
+  /* line 14, ../sass/modules/_about.scss */
   .about-info a.twitter {
     color: #4099ff; }
-    /* line 12, ../sass/modules/_about.scss */
+    /* line 16, ../sass/modules/_about.scss */
     .about-info a.twitter:hover {
       color: #4a4444; }
-  /* line 16, ../sass/modules/_about.scss */
+  /* line 20, ../sass/modules/_about.scss */
   .about-info a.email {
     color: #4a4444; }
-    /* line 18, ../sass/modules/_about.scss */
+    /* line 22, ../sass/modules/_about.scss */
     .about-info a.email:hover {
       color: #a0ce67; }
 

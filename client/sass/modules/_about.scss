@@ -7,6 +7,10 @@
     font-weight: bold;
     color: $sg-green;
       }
+      span.bold{
+        font-weight: bold;
+        color: $sg-brown;
+      }
       a.twitter{
         color: $twitter;
           &:hover{
@@ -22,3 +26,5 @@
 
 
   }
+
+
