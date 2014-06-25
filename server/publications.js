@@ -140,6 +140,16 @@ Meteor.publish('postsList', function(terms) {
   return [];
 });
 
+// Never ending posts
+
+Meteor.publish('postsListInf', function(options) {
+  if(canViewById(this.userId)){
+    posts = Posts.find({}, {sort: {submitted: -1}, limit: options});
+    return posts;
+  }
+  return [];
+});
+
 // -------------------------------------------- Comments -------------------------------------------- //
 
 // Publish comments for a specific post
