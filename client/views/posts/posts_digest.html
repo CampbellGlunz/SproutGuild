@@ -4,20 +4,18 @@
   {{#if hasPosts}}
   <div class="grid-block">
   <div class="day-display"><span class="date-day">{{today}}</span>{{day}}</div> 
-    <!-- <div class="posts grid list"> -->
       {{#each dayposts}}
         {{> post_item}}
       {{/each}}
-    <!-- </div> -->
     </div>
   {{else}}
-    <!-- <div class="grid-small grid-block dialog">
-      <p>{{i18n "Sorry, no posts for today"}}.</p>
-    </div> -->
   {{/if}}
 {{/each}}
 {{#if nextPath}}
-  <a class="more-link" href="{{nextPath}}">MORE</a>
+  <div class="grid more-button">
+    <a id="showMoreResults" class="more-link" href="{{nextPath}}">Sprout More Posts</a>
+  </div>
+  
 {{/if}}
 </div>
 
