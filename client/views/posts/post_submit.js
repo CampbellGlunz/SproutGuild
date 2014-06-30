@@ -72,12 +72,12 @@ Template.post_submit.events({
       var cleanUrl = (url.substring(0, 7) == "http://" || url.substring(0, 8) == "https://") ? url : "http://"+url;
       properties.url = cleanUrl;
     }
-    
-    var urlPiece = encodeURIComponent(cleanUrl);
-    var titlePiece = encodeURI(title);
-    var urlTwit = 'https://twitter.com/intent/tweet?text=' + titlePiece + '&via=SproutGuild&url=' + urlPiece;
-
+  
     function tweetPop(twitterURl){
+        var sgURL = 'http://www.sproutguild.com/posts/'+twitterURl;
+        var urlPiece = encodeURIComponent(sgURL);
+        var titlePiece = encodeURI(title);
+        var urlTwit = 'https://twitter.com/intent/tweet?text=' + titlePiece + '&via=SproutGuild&url=' + urlPiece;
         var intentRegex = /twitter\.com(\:\d{2,4})?\/intent\/(\w+)/,
             windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
             width = 550,
@@ -94,7 +94,7 @@ Template.post_submit.events({
         e.preventDefault && e.preventDefault();
     };
     if (title && url)
-      tweetPop(urlTwit);
+      //tweetPop(urlTwit);
 
     Meteor.call('post', properties, function(error, post) {
       if(error){
@@ -108,6 +108,7 @@ Template.post_submit.events({
         if(post.status === STATUS_PENDING)
           throwError('Thanks, your post is awaiting approval.')
         Router.go('/posts/'+post.postId);
+        tweetPop(post.postId);
       }
     });
   },
