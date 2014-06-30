@@ -94,7 +94,6 @@ Template.post_submit.events({
         e.preventDefault && e.preventDefault();
     };
     if (title && url)
-      //tweetPop(urlTwit);
 
     Meteor.call('post', properties, function(error, post) {
       if(error){
