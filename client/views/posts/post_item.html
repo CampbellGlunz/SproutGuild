@@ -3,22 +3,6 @@
   {{# with post}}
 
   <div class="post post-{{rank}} {{#if sticky}}sticky{{/if}} {{inactiveClass}}" id="{{_id}}">
-    <!--<ul class="post-actions">
-      <li class="post-share desktop"><a href="#" class="share-link"><i class="icon-share"></i><span class="action">{{i18n 'Share'}}</span></a>
-        <div class="share-options hidden">
-          <div data-url="{{#if url}}{{outgoingUrl}}{{else}}{{current_domain}}/posts/{{_id}}{{/if}}" data-text="{{headline}}" class="share-replace">
-          </div>
-        </div>
-      </li>
-      <li class="post-discuss">
-        <a class="discuss-link go-to-comments" href="/posts/{{_id}}">
-          <i class="icon-comment"></i>
-          <span class="count">{{comments}}</span>
-          <span class="action">{{i18n 'Discuss'}}</span>
-        </a>
-      </li>
-      <li class="post-more mobile"><a class="more-link"><i class="icon-share"></i><span class="action">Text </span></a></li>
-    </ul>-->
     <div class="post-content">
       <div class="post-upvote">
         
@@ -29,9 +13,11 @@
         {{/if}}
       </div>
       <div class="post-info">
+      
         <div class="post-avatar">
-          <img class="user-avatar" src="{{userAvatar}}"/>
+          <a href="{{profileURL}}"><img class="user-avatar" src="{{userAvatar}}"/></a>
         </div>
+
         <div class="post-body">
         {{#if sticky}}
           <span class="post-sticky"><i class="icon-pin"></i><span>{{i18n "Sticky"}}</span></span>
@@ -45,16 +31,14 @@
             <a href="{{postLink}}" class="post-title" target="{{postTarget}}">{{headline}}</a>
             {{/if}}
           </div>
-            <!--{{#if url}}<span class="post-domain">{{domain}}</span>{{/if}}-->
               {{#each categories}}
                 <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
               {{/each}}
             {{#if locationIsNotEmpty }}
               <span class="post-domain">[{{location}}]</span>  
-            {{/if}}
-              
+            {{/if}} 
               <span class="comments"> <a class="go-to-comments" href="/posts/{{_id}}">{{comments}} COMMENTS</a></span> | 
-              <a class="tweet-post-button" href=''> <img src="https://dev.twitter.com/sites/default/files/images_documentation/bird_blue_16.png"></a><div data-url="{{postLink}}" data-text="{{headline}}" class="share-replace"></div>
+              <a class="tweet-post-button" href=''> <img src="https://dev.twitter.com/sites/default/files/images_documentation/bird_blue_16.png"></a><div data-url="http://www.sproutguild.com/posts/{{_id}}" data-text="{{headline}}" class="share-replace"></div>
           </h3>
           <p class="post-meta">
             <span class="body-preview short">{{bodyPreview}} </span>
