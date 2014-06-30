@@ -7,7 +7,8 @@ Template.user_profile.helpers({
     return currentUser && (this._id == currentUser._id || isAdmin(currentUser))
   },
   createdAtFormatted: function() {
-    return this.createdAt;
+    var creationDate = moment(this.createdAt);
+    return creationDate.format('MMMM Do YYYY');
   },
   canInvite: function() {
     // if the user is logged in, the target user hasn't been invited yet, invites are enabled, and user is not viewing their own profile
