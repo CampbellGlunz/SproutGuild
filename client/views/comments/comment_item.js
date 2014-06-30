@@ -88,7 +88,7 @@ Template.comment_item.rendered=function(){
       var $container=findQueueContainer($comment);
       var comment_link='<li class="icon-user"><a href="#'+comment._id+'" class="has-tooltip" style="background-image:url('+imgURL+')"><span class="tooltip"><span>'+author+'</span></span></a></li>';
 
-      $(comment_link).appendTo($container.find("ul"));
+      //$(comment_link).appendTo($container.find("ul"));
       // $(comment_link).appendTo($container.find("ul")).hide().fadeIn("slow");
 
       $comment.removeClass("comment-displayed").addClass("comment-queued");
