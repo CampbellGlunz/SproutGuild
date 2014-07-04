@@ -20,20 +20,20 @@
 				padding:0 10px;
 				line-height:50px;
 				&:hover{
-					background:$red;
+					background:$sg-yellow;
 					color:white;
 				}
 			}
 		}
 	}
 }
-.mobile-nav, .content-wrapper{
+.mobile-nav, .content-wrapper, .mobile-user{
 	@include single-transition(ease-out, left, 300ms, 0ms);
 }
 .content-wrapper{
 	position:relative;
 
-	left:0px;
+	//left:0px;
 }
 .mobile-nav-open{
 	.mobile-nav{
@@ -43,6 +43,45 @@
 		overflow:hidden;
 		.content-wrapper{
 			left:280px;
+		}
+	}
+}
+
+.mobile-user{
+	right:-280px;
+	position:fixed;
+	overflow:auto;
+	width:280px;
+	top:0px;
+	bottom:0px;
+	background:#444;
+	color:white;
+	@include box-shadow(inset -3px 0px 7px black(0.5));
+	ul{
+		li{
+			border-bottom:1px white(0.1) solid;
+			a{
+				display:block;
+				height:50px;
+				padding:0 10px;
+				line-height:50px;
+				&:hover{
+					background:$sg-yellow;
+					color:white;
+				}
+			}
+		}
+	}
+}
+
+.mobile-user-open{
+	.mobile-user{
+		right:0px;
+	}
+	.outer-wrapper{
+		overflow:hidden;
+		.content-wrapper{
+			right:280px;
 		}
 	}
 }
@@ -164,6 +203,17 @@
 			}
 		}
 	}
+	.user-avatar{
+				@include border-radius(100px);
+				overflow:hidden;
+				// line-height: 40px;
+				height:40px;
+				width:40px;
+				display:inline-block;
+				margin-top: 5px;
+				float:right;
+				
+				}
 	.post{
 		.post-content{
 			margin-right:50px;
@@ -191,6 +241,7 @@
 				}	
 			}
 			.post-meta{
+				padding-left:0px;
 				font-size:11px;
 				.comments{
 					// display:none;
