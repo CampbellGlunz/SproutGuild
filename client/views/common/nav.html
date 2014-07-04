@@ -15,8 +15,11 @@
     {{/if}}
     <span class="nav tagline desktop">Daily Discovery of the Hippest Natural Foods, Products &amp; Brands</span>
     </div>
-    <a id="mobile-user" href="#user" class="mobile submit"><img class="user-avatar" src="{{userAvatar}}"/></a>
-    
+    {{#if isUser}}
+      <a id="mobile-user" href="#user" class="mobile submit"><img class="user-avatar" src="{{userAvatar}}"/></a>
+    {{else}}
+      <a href="/signin" id="mobile-signin" class="mobile">{{i18n "Sign In"}}</a>
+    {{/if}}
     <div class="top-row-right desktop">
     <ul class="nav user-nav">
       {{#if canView}}
@@ -95,6 +98,9 @@
       {{else}}
         {{> search}}
     {{/if}}
+  </div>
+  <div class="second-row mobile">
+    {{> subscribe}}
   </div>
   </header>
 </template>

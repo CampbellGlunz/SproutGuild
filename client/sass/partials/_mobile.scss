@@ -91,6 +91,21 @@
 	}
 }
 @media screen and (max-width: $break-small) {
+	.MailChimpListSubscribe{
+		margin: 0;
+		height:auto;
+		padding-bottom: 2%;	
+	.sub-content{
+		background:#eee;
+		@include border-radius(3px);
+		padding: 2%;
+		display:inline-block;
+		width:auto;
+		color:white;
+		line-height:160%;
+		font-size:16px;
+	}
+}
 
 	.header-button{
 		position:relative;
@@ -216,7 +231,23 @@
 				margin-top: 5px;
 				float:right;
 	}
+	#mobile-signin{
+				margin-top: 10px;
+	}
+	.day-display{
+			color: $sg-brown;
+			text-transform:uppercase;
+			font-weight: bold;
+			background: url('../../img/date.png') no-repeat;
+			padding-left: 26px;
+			position: relative;
+			margin-bottom: 20px;		
+		}
+	.fix {
+		margin-top: 100px;
+	}
 	.post{
+
 		.post-content{
 			margin-right:50px;
 			margin-right:0px;
