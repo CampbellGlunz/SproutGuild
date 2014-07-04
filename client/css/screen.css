@@ -2284,56 +2284,59 @@ table {
     overflow: hidden;
     height: 40px;
     width: 40px;
-    display: inline-block;
+    display: inline-block; }
+
+  /* line 215, ../sass/partials/_mobile.scss */
+  #mobile-user {
     margin-top: 5px;
     float: right; }
 
-  /* line 218, ../sass/partials/_mobile.scss */
+  /* line 220, ../sass/partials/_mobile.scss */
   .post .post-content {
     margin-right: 50px;
     margin-right: 0px; }
-    /* line 222, ../sass/partials/_mobile.scss */
+    /* line 224, ../sass/partials/_mobile.scss */
     .post .post-content .upvote-link {
       width: 30px; }
-    /* line 225, ../sass/partials/_mobile.scss */
+    /* line 227, ../sass/partials/_mobile.scss */
     .post .post-content .post-info {
       margin-left: 30px;
       padding: 6px 4px 6px 8px; }
-    /* line 230, ../sass/partials/_mobile.scss */
+    /* line 232, ../sass/partials/_mobile.scss */
     .post .post-content .post-heading .post-title {
       line-height: 1.2;
       display: block;
       margin-bottom: 4px;
       font-size: 18px; }
-    /* line 236, ../sass/partials/_mobile.scss */
+    /* line 238, ../sass/partials/_mobile.scss */
     .post .post-content .post-heading .post-domain {
       line-height: 1;
       display: block;
       margin-bottom: 4px;
       font-size: 13px; }
-    /* line 243, ../sass/partials/_mobile.scss */
+    /* line 245, ../sass/partials/_mobile.scss */
     .post .post-content .post-meta {
       padding-left: 0px;
       font-size: 11px; }
-      /* line 249, ../sass/partials/_mobile.scss */
+      /* line 251, ../sass/partials/_mobile.scss */
       .post .post-content .post-meta .unit {
         font-size: 0; }
-        /* line 251, ../sass/partials/_mobile.scss */
+        /* line 253, ../sass/partials/_mobile.scss */
         .post .post-content .post-meta .unit:after {
           font-size: 12px;
           content: "pts "; }
-  /* line 258, ../sass/partials/_mobile.scss */
+  /* line 260, ../sass/partials/_mobile.scss */
   .post .post-actions {
     display: none; }
-    /* line 260, ../sass/partials/_mobile.scss */
+    /* line 262, ../sass/partials/_mobile.scss */
     .post .post-actions li {
       float: none; }
-      /* line 262, ../sass/partials/_mobile.scss */
+      /* line 264, ../sass/partials/_mobile.scss */
       .post .post-actions li a {
         height: 40px;
         width: 40px;
         font-size: 30px; }
-        /* line 266, ../sass/partials/_mobile.scss */
+        /* line 268, ../sass/partials/_mobile.scss */
         .post .post-actions li a i {
           display: block;
           position: absolute;
@@ -2343,9 +2346,9 @@ table {
           height: 100%;
           line-height: 40px;
           text-align: center; }
-        /* line 276, ../sass/partials/_mobile.scss */
+        /* line 278, ../sass/partials/_mobile.scss */
         .post .post-actions li a .count {
           top: 9px; }
-        /* line 279, ../sass/partials/_mobile.scss */
+        /* line 281, ../sass/partials/_mobile.scss */
         .post .post-actions li a .action {
           display: none; } }
