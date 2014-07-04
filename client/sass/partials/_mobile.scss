@@ -20,20 +20,20 @@
 				padding:0 10px;
 				line-height:50px;
 				&:hover{
-					background:$red;
+					background:$sg-yellow;
 					color:white;
 				}
 			}
 		}
 	}
 }
-.mobile-nav, .content-wrapper{
+.mobile-nav, .content-wrapper, .mobile-user{
 	@include single-transition(ease-out, left, 300ms, 0ms);
 }
 .content-wrapper{
 	position:relative;
 
-	left:0px;
+	//left:0px;
 }
 .mobile-nav-open{
 	.mobile-nav{
@@ -46,12 +46,66 @@
 		}
 	}
 }
+
+.mobile-user{
+	right:-280px;
+	position:fixed;
+	overflow:auto;
+	width:280px;
+	top:0px;
+	bottom:0px;
+	background:#444;
+	color:white;
+	@include box-shadow(inset -3px 0px 7px black(0.5));
+	ul{
+		li{
+			border-bottom:1px white(0.1) solid;
+			a{
+				display:block;
+				height:50px;
+				padding:0 10px;
+				line-height:50px;
+				&:hover{
+					background:$sg-yellow;
+					color:white;
+				}
+			}
+		}
+	}
+}
+
+.mobile-user-open{
+	.mobile-user{
+		right:0px;
+	}
+	.outer-wrapper{
+		overflow:hidden;
+		.content-wrapper{
+			right:280px;
+		}
+	}
+}
 @media screen and (max-width: $break-medium){
 	.header{
 		//padding-bottom: 40px;
 	}
 }
 @media screen and (max-width: $break-small) {
+	.MailChimpListSubscribe{
+		margin: 0;
+		height:auto;
+		padding-bottom: 2%;	
+	.sub-content{
+		background:#eee;
+		@include border-radius(3px);
+		padding: 2%;
+		display:inline-block;
+		width:auto;
+		color:white;
+		line-height:160%;
+		font-size:16px;
+	}
+}
 
 	.header-button{
 		position:relative;
@@ -164,7 +218,36 @@
 			}
 		}
 	}
+	.user-avatar{
+				@include border-radius(100px);
+				overflow:hidden;
+				// line-height: 40px;
+				height:40px;
+				width:40px;
+				display:inline-block;
+				
+				}
+	#mobile-user{
+				margin-top: 5px;
+				float:right;
+	}
+	#mobile-signin{
+				margin-top: 10px;
+	}
+	.day-display{
+			color: $sg-brown;
+			text-transform:uppercase;
+			font-weight: bold;
+			background: url('../../img/date.png') no-repeat;
+			padding-left: 26px;
+			position: relative;
+			margin-bottom: 20px;		
+		}
+	.fix {
+		margin-top: 100px;
+	}
 	.post{
+
 		.post-content{
 			margin-right:50px;
 			margin-right:0px;
@@ -191,6 +274,7 @@
 				}	
 			}
 			.post-meta{
+				padding-left:0px;
 				font-size:11px;
 				.comments{
 					// display:none;

@@ -66,9 +66,10 @@ Template.nav.events({
     e.preventDefault();
     Router.go('/account');
   },
-  'click .user-avatar': function(e){
+  'click #mobile-user': function(e){
     e.preventDefault();
-    Accounts._loginButtonsSession.set('dropdownVisible', true);
+    $('body').toggleClass('mobile-user-open');
+    //Accounts._loginButtonsSession.set('dropdownVisible', true);
   },
   'click #login-name-link': function(e){
     e.preventDefault();

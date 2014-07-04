@@ -1,0 +1,16 @@
+<template name="mobile_user">
+  <div id="" class="mobile-user">
+    <div>
+      <ul>
+        <li><a class="account-link" href="{{profileUrl}}">{{i18n "View Profile"}}</a></li>
+        <li><a href="/account" class="account-link">{{i18n "Edit Account"}}</a></li>
+        {{#if currentUser.isAdmin}}
+          
+        {{/if}}
+        {{#if canView}}
+          <li><a href="/submit">{{i18n "Post"}}</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</template>

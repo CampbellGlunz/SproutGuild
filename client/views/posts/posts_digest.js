@@ -14,3 +14,9 @@ Template.posts_digest.events ({
 
 });
 
+Template.nav.rendered=function(){
+  if(Meteor.user()){
+    $('.day-display').removeClass('fix');
+}
+    };
+
