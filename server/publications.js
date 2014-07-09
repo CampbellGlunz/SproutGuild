@@ -140,6 +140,17 @@ Meteor.publish('postsList', function(terms) {
   return [];
 });
 
+// Publish a list of posts for one user
+
+Meteor.publish('postsListPerUser', function(terms, user) {
+  if(canViewById(this.userId)){
+    var parameters = getParameters(terms),
+        posts = Posts.find({author: user}, parameters.options);
+    return posts;
+  }
+  return [];
+});
+
 // Never ending posts
 
 Meteor.publish('postsListInf', function(options) {
