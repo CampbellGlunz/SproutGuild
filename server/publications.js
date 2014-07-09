@@ -145,7 +145,10 @@ Meteor.publish('postsList', function(terms) {
 Meteor.publish('postsListPerUser', function(terms, user) {
   if(canViewById(this.userId)){
     var parameters = getParameters(terms),
-        posts = Posts.find({author: user}, parameters.options);
+        findById = Meteor.users.findOne(user),
+        findBySlug = Meteor.users.findOne({slug: user}),
+        postuser = (typeof findById == "undefined") ? findBySlug : findById,
+        posts = Posts.find({userId: postuser._id}, parameters.options);
     return posts;
   }
   return [];
